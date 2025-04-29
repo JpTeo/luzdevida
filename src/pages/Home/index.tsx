@@ -20,26 +20,20 @@ const Home = () => {
       <ScrollToTop />
       <Container>
         <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
+        
         <ContentBlock
           direction="right"
           title={IntroContent.title}
           content={IntroContent.text}
           button={IntroContent.button}
-          icon="omaheader2.png"
+          icon="luzdevida.png"
           id="intro"
         />
-        <h6 style={{ textAlign: "center", margin: "5% 0%  10% 0" }}>
-          Nuestras clases
-        </h6>
         <ContentBlock
           direction="left"
           title={AboutContent.title}
           content={AboutContent.text}
-          button={IntroContent.button}
-          icon="Pilatesoma.png"
+          icon="luzdevidacomida.png"
           id="about"
         />
         <ContentBlock
@@ -47,19 +41,18 @@ const Home = () => {
           title={MissionContent.title}
           content={MissionContent.text}
           button={IntroContent.button}
-          icon="yogaoma.png"
+          icon="luzdevidaseñora.png"
           id="mission"
         />
         <ContentBlock
           direction="left"
           title={ProductContent.title}
           content={ProductContent.text}
-          button={IntroContent.button}
-          icon="logooma7.png"
+          icon="logoluzdevida.png"
           id="product"
         />
         <FooterWithMap
-          address={"Av. Cabildo 3047, Cdad. Autónoma de Buenos Aires"}
+          address={"Senillosa 324, Cdad. Autónoma de Buenos Aires"}
         />
         <Contact
           title={ContactContent.title}

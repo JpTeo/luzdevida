@@ -13,8 +13,8 @@ export const Title = styled("h4")`
 export const SubTitle = styled("h4")`
   font-family: "Motiva Sans Light", sans-serif;
   font-size: 1.5rem;
-  font-weight: 600;
-  color: white;
+  font-weight: 550;
+  color: #1D6D67;
   text-align: center;
 
   @media (max-width: 768px) {
@@ -125,7 +125,7 @@ export const Empty = styled("div")`
 export const FooterContainer = styled("div")`
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   text-align: center;
   align-items: center;
   gap: 1.5rem;

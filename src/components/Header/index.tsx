@@ -58,7 +58,7 @@ const Header = () => {
       <Container>
         <Row justify="space-between">
           <LogoContainer to="/" aria-label="homepage">
-            <SvgIcon src="logooma7.png" width="70px" height="70px" />
+            <SvgIcon src="logoluzdevida.png" width="120px" height="120px" />
           </LogoContainer>
           <NotHidden>
             <MenuItem />

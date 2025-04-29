@@ -68,7 +68,7 @@ const FooterWithMap = ({ address }: ComponentMap) => {
           >
             <LogoContainer>
               <SvgIcon
-                src="logooma7.png"
+                src="logoluzdevida.png"
                 aria-label="homepage"
                 width="200px"
                 height="200px"
@@ -79,14 +79,13 @@ const FooterWithMap = ({ address }: ComponentMap) => {
                 fontFamily: 'font-family: "Motiva Sans Light", sans-serif;',
                 fontSize: "1.5rem",
                 fontWeight: "bold",
-                color: "white",
+                color: "#1D6D67",
                 textAlign: "center",
               }}
             >
               <EnvironmentOutlined />
               {address}
-              <br></br>
-              Timbre F
+        
             </Typography>
             <SubTitle>Seguinos en nuestras redes !</SubTitle>
             <FooterContainer>
@@ -94,7 +93,7 @@ const FooterWithMap = ({ address }: ComponentMap) => {
                 <div
                   key={idx}
                   onClick={item.onClick}
-                  style={{ cursor: "pointer" }}
+                  style={{ cursor: "pointer",  color: "#1D6D67" }}
                 >
                   {item.icon}
                 </div>

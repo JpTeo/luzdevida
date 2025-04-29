@@ -37,10 +37,8 @@ const Footer = () => {
 
   return (
     <>
-      <div
-        style={{ background: "#B2D8DD", height: "40px", width: "100%" }}
-      ></div>
-      <Extra style={{ background: "#FCFBEA", padding: "2rem 4rem" }}>
+   
+      <Extra style={{ background: "#1D6D67", padding: "2rem 4rem" }}>
         <Row
           gutter={[16, 16]}
           style={{
@@ -53,33 +51,36 @@ const Footer = () => {
           <Col xs={24} md={12}>
             <NavLink to="/">
               <DivImage>
-                <Image src="/img/svg/footerlogo1.png" />
+                <Image src="/img/svg/logoluzblanco.png" />
               </DivImage>
             </NavLink>
           </Col>
           <Col xs={24} md={12} style={{ textAlign: "right" }}>
-            <div style={{ color: "4E6E7E" }}>
+            <div style={{ color: "#F6EFE7" }}>
               <Typography.Title
                 level={5}
-                style={{ color: "4E6E7E", marginBottom: "1rem" }}
+                style={{ color: "#F6EFE7", marginBottom: "1rem" }}
               >
                 Información de contacto
               </Typography.Title>
-              <Typography.Paragraph style={{ color: "4E6E7E", margin: 0 }}>
-                Av. Cabildo 3047, timbre F. Ciudad Autónoma
+              <Typography.Paragraph style={{ color: "#F6EFE7", margin: 0 }}>
+              Senillosa 324, Caballito,
               </Typography.Paragraph>
-              <Typography.Paragraph style={{ color: "4E6E7E", margin: 0 }}>
-                de Buenos Aires - Argentina
+              <Typography.Paragraph style={{ color: "#F6EFE7", margin: 0 }}>
+              Buenos Aires - Argentina
               </Typography.Paragraph>
-              <Typography.Paragraph style={{ color: "4E6E7E", margin: 0 }}>
-                Teléfono: +5491127716208 | contacto@oma-ba.com.ar
+              <Typography.Paragraph style={{ color: "#F6EFE7", margin: 0 }}>
+                Teléfono: +5491149020378 
+              </Typography.Paragraph>
+              <Typography.Paragraph style={{ color: "#F6EFE7", margin: 0 }}>
+                                          +5491120697029
               </Typography.Paragraph>
               <FooterContainer
                 style={{
                   display: "flex",
                   gap: "1rem",
                   justifyContent: "flex-end",
-                  marginTop: "1rem",
+                
                 }}
               >
                 {socialList.map((item, idx) => (
@@ -95,6 +96,7 @@ const Footer = () => {
                       display: "flex",
                       alignItems: "center",
                       justifyContent: "center",
+                      padding: "2.5rem"
                     }}
                   >
                     {item.icon}
