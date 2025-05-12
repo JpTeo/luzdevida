@@ -25,7 +25,7 @@ export const Styles = createGlobalStyle`
         padding:0;
         border: 0;
         outline: 0;
-        background: #F6EFE7;
+        background: #490A3F;
         overflow-x: hidden;
     }
 
@@ -37,7 +37,7 @@ export const Styles = createGlobalStyle`
     textarea {
         border-radius: 4px;
         border: 0;
-        background: rgb(241, 242, 243);
+        background: #49ob3f;
         transition: all 0.3s ease-in-out;  
         outline: none;
         width: 100%;  
@@ -56,7 +56,7 @@ export const Styles = createGlobalStyle`
     h5,
     h6 {
         font-family: 'Comme Bold', serif;
-        color: #1D6D67;
+        color: rgb(255, 255, 255);
         font-size: 56px;
         line-height: 1.18;
 
@@ -70,7 +70,7 @@ export const Styles = createGlobalStyle`
     }
 
     p {
-        color: #1D6D67;
+        color: rgb(255, 255, 255);
         font-size: 21px;        
         line-height: 1.41;
     }

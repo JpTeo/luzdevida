@@ -79,7 +79,7 @@ const FooterWithMap = ({ address }: ComponentMap) => {
                 fontFamily: 'font-family: "Motiva Sans Light", sans-serif;',
                 fontSize: "1.5rem",
                 fontWeight: "bold",
-                color: "#1D6D67",
+                color: "rgb(255, 255, 255)",
                 textAlign: "center",
               }}
             >
@@ -93,7 +93,7 @@ const FooterWithMap = ({ address }: ComponentMap) => {
                 <div
                   key={idx}
                   onClick={item.onClick}
-                  style={{ cursor: "pointer",  color: "#1D6D67" }}
+                  style={{ cursor: "pointer",  color: "rgb(255, 255, 255)" }}
                 >
                   {item.icon}
                 </div>

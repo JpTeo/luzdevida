@@ -37,10 +37,8 @@ export const NavLink = styled(Link)`
   }
 `;
 export const DivImage = styled("div")`
-  border-radius: 50%;
   width: 7vw;
   height: 7vw;
-  border: 2px solid #4e6e7e;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -79,7 +77,7 @@ export const ContainerMapa = styled("div")`
 `;
 
 export const Para = styled("div")`
-  color: #18216d;
+  color:rgb(226, 226, 226);
   font-size: 14px;
   width: 70%;
 `;
