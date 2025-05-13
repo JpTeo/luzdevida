@@ -64,7 +64,13 @@ const Home = () => {
           content={ObjetivoContent.text}
         />
         <SliderComponent ContentSlider={ContentSlider.image} />
-
+        <ContentBlock
+          direction="left"
+          title={AboutContent.title}
+          content={AboutContent.text}
+          icon="luzdevidacomida.png"
+          id="about"
+        ></ContentBlock>
         <ContentBlockOnlyText
           direction="right"
           title={InstalacionesContent.title}
