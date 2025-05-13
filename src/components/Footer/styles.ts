@@ -39,8 +39,6 @@ export const NavLink = styled(Link)`
 export const DivImage = styled("div")`
   width: 9vw;
   height: 9vw;
-  background: #490a3f;
-  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;

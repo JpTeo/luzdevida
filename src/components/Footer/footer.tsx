@@ -107,7 +107,7 @@ const Footer = () => {
       </Extra>
       <div
         style={{
-          background: "#B2D8DD",
+          background: "white",
           padding: "0.5rem 4rem",
           textAlign: "right",
         }}
