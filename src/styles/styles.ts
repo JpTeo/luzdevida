@@ -111,8 +111,12 @@ export const Styles = createGlobalStyle`
    .ant-drawer-content {
          background:#4E6E7E;
     }
+    .ant-carousel  {
+     backgkround:red;   
+    }
     .ant-carousel .slick-slide {
          display: flex !important;
+        
          align-items: center;
          justify-content: center; 
 }

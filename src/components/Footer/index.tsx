@@ -68,7 +68,7 @@ const FooterWithMap = ({ address }: ComponentMap) => {
           >
             <LogoContainer>
               <SvgIcon
-                src="logoluzdevida.png"
+                src="/img/logosNuevos/logo1.png"
                 aria-label="homepage"
                 width="200px"
                 height="200px"

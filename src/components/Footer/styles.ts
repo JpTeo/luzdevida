@@ -14,7 +14,7 @@ export const SubTitle = styled("h4")`
   font-family: "Motiva Sans Light", sans-serif;
   font-size: 1.5rem;
   font-weight: 550;
-  color: #1D6D67;
+  color: #1d6d67;
   text-align: center;
 
   @media (max-width: 768px) {
@@ -37,8 +37,10 @@ export const NavLink = styled(Link)`
   }
 `;
 export const DivImage = styled("div")`
-  width: 7vw;
-  height: 7vw;
+  width: 9vw;
+  height: 9vw;
+  background: #490a3f;
+  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -77,7 +79,7 @@ export const ContainerMapa = styled("div")`
 `;
 
 export const Para = styled("div")`
-  color:rgb(226, 226, 226);
+  color: rgb(226, 226, 226);
   font-size: 14px;
   width: 70%;
 `;

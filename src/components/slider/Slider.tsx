@@ -1,41 +1,54 @@
-import { LeftOutlined, RightOutlined } from "@ant-design/icons";
-import { Carousel, Image } from "antd";
+// components/SliderComponent.tsx
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/navigation";
+import { Navigation, Autoplay } from "swiper/modules";
+import "./SliderComponent.css"; // si querés estilos personalizados
+import { SvgIcon } from "../../common/SvgIcon";
 
 interface SliderProps {
   ContentSlider: string[];
+  fullWidth?: boolean;
 }
-const SliderComponent = ({ ContentSlider }: SliderProps) => {
+
+const SliderComponent = ({ ContentSlider, fullWidth }: SliderProps) => {
   return (
-    <Carousel
-      className="ant-carousel"
-      arrows
-      style={{
-        width: "100%",
-      }}
-      prevArrow={
-        <button style={{ background: "red" }}>
-          <LeftOutlined />
-        </button>
-      }
-      nextArrow={
-        <button style={{ background: "blue" }}>
-          <RightOutlined />
-        </button>
-      }
+    <Swiper
+      modules={[Navigation, Autoplay]}
+      navigation
+      autoplay={{ delay: 4000 }}
+      loop
+      className="mySwiper"
+      style={{ width: "100%" }}
     >
-      {/* <RightArrow />
-      <LeftArrow /> */}
-      {ContentSlider.map((item) => (
-        <div key={item}>
-          <Image
-            src={`/${item}`}
-            height={"50vh"}
-            style={{ objectFit: "contain" }}
-            preview={false}
-          />
-        </div>
+      {ContentSlider.map((item, index) => (
+        <SwiperSlide
+          key={index}
+          style={{
+            height: "30vw",
+            width: "10vw",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          {fullWidth ? (
+            <div
+              style={{
+                height: "500px",
+                width: "100%",
+                backgroundImage: `url(${item})`,
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+                borderRadius: "20px",
+              }}
+            />
+          ) : (
+            <SvgIcon src={item} width="unset" height="100%" />
+          )}
+        </SwiperSlide>
       ))}
-    </Carousel>
+    </Swiper>
   );
 };
 

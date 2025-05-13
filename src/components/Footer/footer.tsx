@@ -37,8 +37,7 @@ const Footer = () => {
 
   return (
     <>
-   
-      <Extra style={{ background: "rgb(226, 226, 226)", padding: "2rem 4rem" }}>
+      <Extra style={{ background: "rgb(204, 169, 221)", padding: "2rem 4rem" }}>
         <Row
           gutter={[16, 16]}
           style={{
@@ -51,7 +50,7 @@ const Footer = () => {
           <Col xs={24} md={12}>
             <NavLink to="/">
               <DivImage>
-                <Image src="/img/svg/logoluzblanco.png" />
+                <Image src="/img/logosNuevos/logo1.png" height={"6vw"} />
               </DivImage>
             </NavLink>
           </Col>
@@ -64,23 +63,22 @@ const Footer = () => {
                 Información de contacto
               </Typography.Title>
               <Typography.Paragraph style={{ color: "black", margin: 0 }}>
-              Senillosa 324, Caballito,
+                Senillosa 324, Caballito,
               </Typography.Paragraph>
               <Typography.Paragraph style={{ color: "black", margin: 0 }}>
-              Buenos Aires - Argentina
+                Buenos Aires - Argentina
               </Typography.Paragraph>
               <Typography.Paragraph style={{ color: "black", margin: 0 }}>
-                Teléfono: +5491149020378 
+                Teléfono: +5491149020378
               </Typography.Paragraph>
               <Typography.Paragraph style={{ color: "black", margin: 0 }}>
-                                          +5491120697029
+                +5491120697029
               </Typography.Paragraph>
               <FooterContainer
                 style={{
                   display: "flex",
                   gap: "1rem",
                   justifyContent: "flex-end",
-                
                 }}
               >
                 {socialList.map((item, idx) => (
@@ -96,7 +94,7 @@ const Footer = () => {
                       display: "flex",
                       alignItems: "center",
                       justifyContent: "center",
-                      padding: "2.5rem"
+                      padding: "2.5rem",
                     }}
                   >
                     {item.icon}
@@ -115,7 +113,7 @@ const Footer = () => {
         }}
       >
         <Typography.Text style={{ fontSize: "0.9rem" }}>
-          Creado Teo-Coop
+          Creado por Teo-Coop
         </Typography.Text>
       </div>
     </>

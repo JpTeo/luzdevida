@@ -5,8 +5,7 @@ interface StyledRowProps {
 }
 export const ContentSection = styled("section")`
   position: relative;
-  padding-bottom: 8rem;
-
+  margin: 10rem 0;
   @media only screen and (max-width: 1024px) {
     padding-bottom: 10rem;
   }

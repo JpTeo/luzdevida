@@ -2,6 +2,8 @@ export interface ContentBlockProps {
   icon?: string;
   title: string;
   content: string;
+  fullWidthSlider?:boolean;
+  sliderContent?: string[];
   section?: {
     title: string;
     content: string;

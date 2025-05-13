@@ -1,4 +1,4 @@
-import { Row, Col } from "antd";
+import { Col, Row } from "antd";
 import { Fade } from "react-awesome-reveal";
 import { ContentBlockProps } from "./types";
 import { Button } from "../../common/Button";
@@ -8,17 +8,20 @@ import {
   Content,
   ContentWrapper,
   ServiceWrapper,
-  MinTitle,
-  MinPara,
   StyledRow,
   ButtonWrapper,
+  MinTitle,
+  MinPara,
 } from "./styles";
+import SliderComponent from "../slider/Slider";
 
 const ContentBlock = ({
   icon,
   title,
   content,
+  sliderContent,
   section,
+  fullWidthSlider,
   button,
   id,
   direction,
@@ -29,7 +32,7 @@ const ContentBlock = ({
       behavior: "smooth",
     });
   };
-
+  console.log(sliderContent, title, icon, "asas slider conten");
   return (
     <ContentSection>
       <Fade direction={direction} triggerOnce>
@@ -42,6 +45,16 @@ const ContentBlock = ({
           {icon && (
             <Col lg={11} md={11} sm={12} xs={24}>
               <SvgIcon src={icon} width="100%" height="100%" />
+            </Col>
+          )}
+          {sliderContent && (
+            <Col lg={11} md={11} sm={12} xs={24}>
+              <div>
+                <SliderComponent
+                  ContentSlider={sliderContent}
+                  fullWidth={fullWidthSlider}
+                />
+              </div>
             </Col>
           )}
           <Col lg={11} md={11} sm={11} xs={24}>
