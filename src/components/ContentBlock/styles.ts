@@ -13,7 +13,6 @@ export const ContentSection = styled("section")`
 `;
 export const Content = styled("p")`
   margin: 1.5rem 0 2rem 0;
-
   @media only screen and (max-width: 768px) {
     text-align: center;
   }

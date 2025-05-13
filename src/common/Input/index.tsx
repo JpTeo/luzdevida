@@ -5,7 +5,9 @@ import { InputProps } from "../types";
 const Input = ({ name, placeholder, onChange }: InputProps) => {
   return (
     <Container>
-      <Label htmlFor={name}>{name}</Label>
+      <Label htmlFor={name} style={{ color: "white" }}>
+        {name}
+      </Label>
       <StyledInput
         placeholder={placeholder}
         name={name}

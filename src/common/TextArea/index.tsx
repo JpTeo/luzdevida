@@ -3,7 +3,9 @@ import { InputProps } from "../types";
 
 const TextArea = ({ name, placeholder, onChange }: InputProps) => (
   <StyledContainer>
-    <Label htmlFor={name}>{name}</Label>
+    <Label htmlFor={name} style={{ color: "white" }}>
+      {name}
+    </Label>
     <StyledTextArea
       placeholder={placeholder}
       id={name}

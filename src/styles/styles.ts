@@ -26,7 +26,7 @@ export const Styles = createGlobalStyle`
         border: 0;
         outline: 0;
         background: #490A3F;
-        overflow-x: hidden;
+        // overflow-x: hidden;
     }
 
     a:hover {
@@ -111,4 +111,20 @@ export const Styles = createGlobalStyle`
    .ant-drawer-content {
          background:#4E6E7E;
     }
+    .ant-carousel .slick-slide {
+         display: flex !important;
+         align-items: center;
+         justify-content: center; 
+}
+    .ant-carousel .slick-arrow {
+        opacity: 1 !important;
+        z-index: 1000 !important;
+        display: block !important;
+        height: 50px;
+        width: 50px;
+        color: white !important;
+        border-radius: 50%;
+        border: none;
+  }
+
 `;

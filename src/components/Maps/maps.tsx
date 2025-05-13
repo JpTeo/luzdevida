@@ -22,14 +22,20 @@ const GoogleMap: React.FC<GoogleMapProps> = ({
   return (
     <div
       className={`google-map-container ${className}`}
-      style={{ width: "100vw", height: "100%" }}
+      style={{
+        width: width,
+        height: height,
+        position: "relative",
+        overflow: "hidden",
+        borderRadius: "8px",
+      }}
     >
       <iframe
         title={`Mapa de ${address}`}
-        width={width}
-        height={height}
+        width="100%"
+        height="100%"
         frameBorder="0"
-        style={{ border: 0, borderRadius: "8px" }}
+        style={{ border: 0 }}
         src={`https://www.google.com/maps/embed/v1/place?key=${apiKey}&q=${encodedAddress}&zoom=${zoom}`}
         allowFullScreen
         aria-hidden="false"

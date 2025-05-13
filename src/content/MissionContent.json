@@ -1,9 +1,9 @@
 {
-  "title": "Nuestro equipo",
-  "text": "Nuestro equipo está conformado por médicos, enfermeros, terapistas, nutricionistas y personal de asistencia altamente capacitado. Trabajamos de manera interdisciplinaria para brindar una atención personalizada, priorizando la salud física, emocional y social de cada residente.",
- "button": [
+  "title": "Equipo de profesionales",
+  "text": "Dirección médica: Dr. Jorge M. Muszkat\nNutrición: Lic. Karina Lusa\nPsicología\nKinesiología\nTerapia Ocupacional\nMusicoterapia",
+  "button": [
     {
-      "title": "Contactaté"
+      "title": "Contactate"
     }
   ]
 }

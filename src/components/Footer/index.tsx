@@ -45,7 +45,7 @@ const FooterWithMap = ({ address }: ComponentMap) => {
   ];
 
   return (
-    <Extra>
+    <Extra style={{ marginTop: "10vh" }}>
       <Fade direction={"left"} triggerOnce>
         <Row
           gutter={[16, 16]}
@@ -85,7 +85,6 @@ const FooterWithMap = ({ address }: ComponentMap) => {
             >
               <EnvironmentOutlined />
               {address}
-        
             </Typography>
             <SubTitle>Seguinos en nuestras redes !</SubTitle>
             <FooterContainer>
@@ -93,7 +92,7 @@ const FooterWithMap = ({ address }: ComponentMap) => {
                 <div
                   key={idx}
                   onClick={item.onClick}
-                  style={{ cursor: "pointer",  color: "rgb(255, 255, 255)" }}
+                  style={{ cursor: "pointer", color: "rgb(255, 255, 255)" }}
                 >
                   {item.icon}
                 </div>
