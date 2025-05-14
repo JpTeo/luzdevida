@@ -14,7 +14,7 @@ export const SubTitle = styled("h4")`
   font-family: "Motiva Sans Light", sans-serif;
   font-size: 1.5rem;
   font-weight: 550;
-  color: #1d6d67;
+  color: white;
   text-align: center;
 
   @media (max-width: 768px) {

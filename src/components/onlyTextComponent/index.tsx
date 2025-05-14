@@ -1,5 +1,5 @@
 import { Col } from "antd";
-import { ContentSection, Content, ContentWrapper, StyledRow } from "./style";
+import { ContentSection, ContentWrapper, StyledRow } from "./style";
 import { Fade } from "react-awesome-reveal";
 
 export interface ContentBlockProps {
@@ -16,13 +16,11 @@ const ContentBlockOnlyText = ({
   return (
     <ContentSection>
       <Fade direction={direction} triggerOnce>
-        <StyledRow justify="space-between" align="middle" direction={direction}>
-          <Col xs={24}>
-            <ContentWrapper>
-              <h5>{title}</h5>
-              <Content>{content}</Content>
-            </ContentWrapper>
-          </Col>
+        <StyledRow align="middle" direction={direction}>
+          <ContentWrapper>
+            <h5>{title}</h5>
+            <p style={{ width: "70%", margin: "0 auto" }}>{content}</p>
+          </ContentWrapper>
         </StyledRow>
       </Fade>
     </ContentSection>

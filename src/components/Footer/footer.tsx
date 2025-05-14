@@ -69,10 +69,7 @@ const Footer = () => {
                 Buenos Aires - Argentina
               </Typography.Paragraph>
               <Typography.Paragraph style={{ color: "black", margin: 0 }}>
-                Teléfono: +5491149020378
-              </Typography.Paragraph>
-              <Typography.Paragraph style={{ color: "black", margin: 0 }}>
-                +5491120697029
+                Teléfono: +54 9 11 3825-9999
               </Typography.Paragraph>
               <FooterContainer
                 style={{

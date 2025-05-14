@@ -30,6 +30,10 @@ const Home = () => {
         id="intro"
         button={IntroContent.button}
         direction={"right"}
+        imageSize={{
+          height: "100%",
+          width: "100%",
+        }}
       />
       <Container>
         <br></br>
@@ -41,13 +45,21 @@ const Home = () => {
           content={ProductContent.text}
           icon="/img/logosNuevos/logo1.png"
           id="product"
+          imageSize={{
+            height: "auto",
+            width: "70%",
+          }}
         />
         <ContentBlock
           direction="right"
           title={MissionContent.title}
           content={MissionContent.text}
           button={IntroContent.button}
-          icon="/img/svg/luzdevidaseñora.png"
+          icon="/img/sliderObjetivo/1.jpeg"
+          imageSize={{
+            height: "auto",
+            width: "60%",
+          }}
           id="mission"
         />
         <ContentBlockOnlyText
@@ -59,6 +71,10 @@ const Home = () => {
 
         <ContentBlock
           direction="left"
+          imageSize={{
+            height: "100%",
+            width: "100%",
+          }}
           title={InstalacionesContent.title}
           content={InstalacionesContent.content}
           sliderContent={InstalacionesContent.image}

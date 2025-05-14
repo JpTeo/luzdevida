@@ -17,6 +17,7 @@ import SliderComponent from "../slider/Slider";
 
 const ContentBlock = ({
   icon,
+  imageSize,
   title,
   content,
   sliderContent,
@@ -44,7 +45,11 @@ const ContentBlock = ({
         >
           {icon && (
             <Col lg={11} md={11} sm={12} xs={24}>
-              <SvgIcon src={icon} width="100%" height="100%" />
+              <SvgIcon
+                src={icon}
+                width={imageSize.width}
+                height={imageSize.height}
+              />
             </Col>
           )}
           {sliderContent && (
