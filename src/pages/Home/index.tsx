@@ -23,12 +23,8 @@ const Home = () => {
     <>
       <WhatsAppButton />
       <ScrollToTop />
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
       <FullWidthContentBlock
-        icon="/img/svg/luzdevidahome.png"
+        icon="/img/googleMaps.png"
         title={IntroContent.title}
         content={IntroContent.text}
         id="intro"

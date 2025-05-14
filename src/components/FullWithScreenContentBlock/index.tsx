@@ -1,107 +1,64 @@
-import { Row, Col } from "antd";
-import { Fade } from "react-awesome-reveal";
-import { ContentBlockProps } from "../ContentBlock/types";
-import { Button } from "../../common/Button";
-import { SvgIcon } from "../../common/SvgIcon";
-import {
-  ContentSection,
-  Content,
-  ContentWrapper,
-  ServiceWrapper,
-  MinTitle,
-  MinPara,
-  StyledRow,
-  ButtonWrapper,
-} from "./styles";
+"use client";
 
-const ContentBlock = ({
+import { Row, Col, Image } from "antd";
+import { Fade } from "react-awesome-reveal";
+import type { ContentBlockProps } from "../ContentBlock/types";
+import { Button } from "../../common/Button";
+import {
+  TextHighlight,
+  HeroSection,
+  HeroContent,
+  MainHeading,
+  ButtonContainer,
+  StyledContent,
+} from "./styles";
+import { redirectWhatsApp } from "../../common/utils/ContactsRedirect";
+
+const FullWidthContentBlock = ({
   icon,
   title,
-  content,
-  section,
   button,
   id,
-  direction,
 }: ContentBlockProps) => {
-  const scrollTo = (id: string) => {
-    const element = document.getElementById(id) as HTMLDivElement;
-    element.scrollIntoView({
-      behavior: "smooth",
-    });
-  };
-
+  console.log(icon, "asas icon");
   return (
-    <ContentSection>
-      <Fade direction={direction} triggerOnce>
-        <StyledRow
-          justify="space-between"
-          align="middle"
-          id={id}
-          direction={direction}
-        >
-          {icon && (
-            <Col lg={11} md={11} sm={12} xs={24}>
-              <SvgIcon src={icon} width="100%" height="100%" />
-            </Col>
-          )}
-          <Col lg={11} md={11} sm={11} xs={24}>
-            <ContentWrapper>
-              <h6>{title}</h6>
-              <Content>{content}</Content>
-              <ButtonWrapper>
-                {button?.map(
-                  (
-                    item: {
-                      color?: string;
-                      title: string;
-                    },
-                    id: number
-                  ) => {
-                    return (
-                      <Button
-                        key={id}
-                        color={item.color}
-                        onClick={() => scrollTo("about")}
-                      >
-                        {item.title}
+    <>
+      <HeroSection $backgroundImage={`${icon}`}>
+        <HeroContent>
+          <Row style={{ height: "100%" }}>
+            <Col
+              xs={24}
+              lg={24}
+              style={{
+                display: "flex",
+                alignItems: "center",
+              }}
+            >
+              <Fade direction="left" triggerOnce>
+                <StyledContent>
+                  <TextHighlight>{title}</TextHighlight>
+                  <MainHeading>
+                    Conecta con tu cuerpo y tu mente <br /> en un espacio
+                    diseñado para tu bienestar
+                  </MainHeading>
+                  <ButtonContainer>
+                    {button?.map(({ title }) => (
+                      <Button onClick={redirectWhatsApp} key={title}>
+                        {title}
                       </Button>
-                    );
-                  }
-                )}
-              </ButtonWrapper>
-              <ServiceWrapper>
-                <Row justify="space-between" style={{ background: "red" }}>
-                  {typeof section === "object" &&
-                    section?.map(
-                      (
-                        item: {
-                          title: string;
-                          content: string;
-                          icon: string;
-                        },
-                        id: number
-                      ) => {
-                        return (
-                          <Col key={id} span={11}>
-                            <SvgIcon
-                              src={item.icon}
-                              width="60px"
-                              height="60px"
-                            />
-                            <MinTitle>{item.title}</MinTitle>
-                            <MinPara>{item.content}</MinPara>
-                          </Col>
-                        );
-                      }
-                    )}
-                </Row>
-              </ServiceWrapper>
-            </ContentWrapper>
-          </Col>
-        </StyledRow>
-      </Fade>
-    </ContentSection>
+                    ))}
+                  </ButtonContainer>
+                </StyledContent>
+              </Fade>
+            </Col>
+            {/* <Col xs={12} lg={12} style={{ height: "100vh" }}>
+              <BackgroundComponent $backgroundImage={`${icon}`} />
+            </Col> */}
+          </Row>
+        </HeroContent>
+      </HeroSection>
+    </>
   );
 };
 
-export default ContentBlock;
+export default FullWidthContentBlock;
