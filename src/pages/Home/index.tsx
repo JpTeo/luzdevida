@@ -12,6 +12,7 @@ import ContentBlockOnlyText from "../../components/onlyTextComponent";
 import SliderComponent from "../../components/slider/Slider";
 import ContentSlider from "../../content/slider.json";
 import InstalacionesContent from "../../content/InstalacionesContent.json";
+import ProfessionalCards from "../../components/professional-card";
 
 const Contact = lazy(() => import("../../components/ContactForm"));
 const Container = lazy(() => import("../../common/Container"));
@@ -68,6 +69,12 @@ const Home = () => {
           content={ObjetivoContent.text}
         />
         <SliderComponent ContentSlider={ContentSlider.image} />
+        
+         <div className="flex min-h-screen flex-col items-center justify-center p-4 md:p-8 bg-[#f8f4f1]">
+      <div className="w-full max-w-7xl">
+        <ProfessionalCards />
+      </div>
+    </div>
 
         <ContentBlock
           direction="left"
