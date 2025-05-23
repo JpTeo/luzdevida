@@ -1,6 +1,6 @@
 "use client";
 
-import { Row, Col, Image } from "antd";
+import { Row, Col } from "antd";
 import { Fade } from "react-awesome-reveal";
 import type { ContentBlockProps } from "../ContentBlock/types";
 import { Button } from "../../common/Button";
@@ -14,12 +14,7 @@ import {
 } from "./styles";
 import { redirectWhatsApp } from "../../common/utils/ContactsRedirect";
 
-const FullWidthContentBlock = ({
-  icon,
-  title,
-  button,
-  id,
-}: ContentBlockProps) => {
+const FullWidthContentBlock = ({ icon, title, button }: ContentBlockProps) => {
   console.log(icon, "asas icon");
   return (
     <>

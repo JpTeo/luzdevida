@@ -28,7 +28,6 @@ const Home = () => {
         icon="/img/googleMaps.png"
         title={IntroContent.title}
         content={IntroContent.text}
-        id="intro"
         button={IntroContent.button}
         direction={"right"}
         imageSize={{
@@ -39,7 +38,6 @@ const Home = () => {
       <Container>
         <br></br>
         <br></br>
-
         <ContentBlock
           direction="left"
           title={ProductContent.title}
@@ -51,25 +49,22 @@ const Home = () => {
             width: "70%",
           }}
         />
-        <ContentBlock
+
+        <ContentBlockOnlyText
+          id="nosotros"
           direction="right"
           title={MissionContent.title}
           content={MissionContent.text}
-          button={IntroContent.button}
-          icon="/img/sliderObjetivo/1.jpeg"
-          imageSize={{
-            height: "auto",
-            width: "60%",
-          }}
-          id="mission"
         />
+        <ProfessionalCards />
         <ContentBlockOnlyText
+          id="objetivo"
           direction="left"
           title={ObjetivoContent.title}
           content={ObjetivoContent.text}
         />
         <SliderComponent ContentSlider={ContentSlider.image} />
-        <ProfessionalCards />
+
         <ContentBlock
           direction="left"
           imageSize={{
@@ -80,8 +75,8 @@ const Home = () => {
           content={InstalacionesContent.content}
           sliderContent={InstalacionesContent.image}
           fullWidthSlider
-          id="about"
-        ></ContentBlock>
+          id="servicios"
+        />
         <FooterWithMap
           address={"Senillosa 324, Cdad. Autónoma de Buenos Aires"}
         />

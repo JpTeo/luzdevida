@@ -20,6 +20,6 @@ export interface ContentBlockProps {
         color: string;
       }
   )[];
-  id: string;
+  id?: string;
   direction: "left" | "right";
 }
