@@ -46,7 +46,7 @@ const FooterWithMap = ({ address }: ComponentMap) => {
 
   return (
     <Extra style={{ marginTop: "10vh" }}>
-      <Fade direction={"left"} triggerOnce>
+      <Fade direction={"right"} triggerOnce>
         <Row
           gutter={[16, 16]}
           style={{
@@ -56,6 +56,22 @@ const FooterWithMap = ({ address }: ComponentMap) => {
             minHeight: "fit-content",
           }}
         >
+          <Col
+            xs={24}
+            md={12}
+            style={{
+              height: "200%",
+            }}
+          >
+            <ContainerMapa>
+              <GoogleMap
+                address={address}
+                height="100%"
+                width="100%"
+                zoom={18}
+              />
+            </ContainerMapa>
+          </Col>
           <Col
             xs={24}
             md={12}
@@ -98,22 +114,6 @@ const FooterWithMap = ({ address }: ComponentMap) => {
                 </div>
               ))}
             </FooterContainer>
-          </Col>
-          <Col
-            xs={24}
-            md={12}
-            style={{
-              height: "200%",
-            }}
-          >
-            <ContainerMapa>
-              <GoogleMap
-                address={address}
-                height="100%"
-                width="100%"
-                zoom={18}
-              />
-            </ContainerMapa>
           </Col>
         </Row>
       </Fade>

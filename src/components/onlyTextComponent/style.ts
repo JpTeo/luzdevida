@@ -5,6 +5,7 @@ interface StyledRowProps {
 }
 export const ContentSection = styled("section")`
   position: relative;
+  margin-top: 5%
 `;
 export const StyledRow = styled(Row).withConfig({
   shouldForwardProp: (prop) => prop !== "direction",

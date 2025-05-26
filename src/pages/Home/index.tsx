@@ -49,6 +49,7 @@ const Home = () => {
             width: "70%",
           }}
         />
+         <br></br>
         <ContentBlockOnlyText
           id="nosotros"
           direction="right"
@@ -75,7 +76,7 @@ const Home = () => {
           fullWidthSlider
           id="servicios"
         />
-      
+    
         <FooterWithMap
           address={"Senillosa 324, Cdad. Autónoma de Buenos Aires"}
         />

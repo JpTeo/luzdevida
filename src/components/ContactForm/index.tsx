@@ -21,8 +21,8 @@ const Contact = ({ title, content, id }: ContactProps) => {
     <ContactContainer id={id}>
       <Row justify="space-between" align="middle" className="contact-row">
         <Col
-          lg={{ span: 12, order: 1 }} // En desktop: primero el formulario
-          md={{ span: 11, order: 1 }}
+          lg={{ span: 12, order: 2 }} // En desktop: primero el formulario
+          md={{ span: 11, order: 2 }}
           sm={{ span: 24, order: 2 }} // En mobile: segundo
           xs={{ span: 24, order: 2 }}
           className="form-column"
@@ -66,8 +66,8 @@ const Contact = ({ title, content, id }: ContactProps) => {
         </Col>
 
         <Col
-          lg={{ span: 12, order: 2 }} // En desktop: segundo el texto
-          md={{ span: 12, order: 2 }}
+          lg={{ span: 12, order: 1 }} // En desktop: segundo el texto
+          md={{ span: 12, order: 1 }}
           sm={{ span: 24, order: 1 }} // En mobile: primero
           xs={{ span: 24, order: 1 }}
           className="content-column"
