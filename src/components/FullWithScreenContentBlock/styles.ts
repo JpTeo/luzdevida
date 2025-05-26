@@ -94,7 +94,9 @@ export const ButtonContainer = styled.div`
   display: flex;
   margin-top: 2rem;
   width: 10vw;
-  @media (max-width: 480px) {
+  @media (max-width: 10401x) {
     flex-direction: column;
+    width: 35vw;
+    min-width: fit-content;
   }
 `;

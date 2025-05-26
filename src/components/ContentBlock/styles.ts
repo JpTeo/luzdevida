@@ -7,7 +7,7 @@ export const ContentSection = styled("section")`
   position: relative;
   margin: 10rem 0;
   @media only screen and (max-width: 1024px) {
-    padding-bottom: 10rem;
+    padding-bottom: 0rem;
   }
 `;
 export const Content = styled("p")`

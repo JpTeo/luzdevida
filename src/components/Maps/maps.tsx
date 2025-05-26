@@ -13,7 +13,6 @@ const GoogleMap: React.FC<GoogleMapProps> = ({
   const apiKey = process.env.REACT_APP_GOOGLE_MAPS_API_KEY;
   const encodedAddress = encodeURIComponent(address);
   const googleMapsUrl = `https://www.google.com/maps/place/${encodedAddress}`;
-  console.log(apiKey, "asas apiKey");
   if (!apiKey) {
     console.error("Google Maps API key is missing");
     return <div>Mapa no disponible</div>;

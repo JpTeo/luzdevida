@@ -19,14 +19,14 @@ const SliderComponent = ({ ContentSlider, fullWidth }: SliderProps) => {
       autoplay={{ delay: 4000 }}
       loop
       className="mySwiper"
-      style={{ width: "100%" }}
     >
       {ContentSlider.map((item, index) => (
         <SwiperSlide
+         
           key={index}
           style={{
-            height: "30vw",
-            width: "10vw",
+            height: "100%",
+            width: "100%",
             display: "flex",
             alignItems: "center",
             justifyContent: "center",

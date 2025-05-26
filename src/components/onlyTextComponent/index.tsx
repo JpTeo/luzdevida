@@ -1,4 +1,9 @@
-import { ContentSection, ContentWrapper, StyledRow } from "./style";
+import {
+  ContainerText,
+  ContentSection,
+  ContentWrapper,
+  StyledRow,
+} from "./style";
 import { Fade } from "react-awesome-reveal";
 
 export interface ContentBlockProps {
@@ -20,7 +25,7 @@ const ContentBlockOnlyText = ({
         <StyledRow align="middle" direction={direction}>
           <ContentWrapper>
             <h5>{title}</h5>
-            <p style={{ width: "70%", margin: "0 auto" }}>{content}</p>
+            <ContainerText>{content}</ContainerText>
           </ContentWrapper>
         </StyledRow>
       </Fade>

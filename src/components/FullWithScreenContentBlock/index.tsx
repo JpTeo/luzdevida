@@ -15,7 +15,6 @@ import {
 import { redirectWhatsApp } from "../../common/utils/ContactsRedirect";
 
 const FullWidthContentBlock = ({ icon, title, button }: ContentBlockProps) => {
-  console.log(icon, "asas icon");
   return (
     <>
       <HeroSection $backgroundImage={`${icon}`}>

@@ -33,7 +33,6 @@ const ContentBlock = ({
       behavior: "smooth",
     });
   };
-  console.log(sliderContent, title, icon, "asas slider conten");
   return (
     <ContentSection>
       <Fade direction={direction} triggerOnce>
@@ -44,7 +43,17 @@ const ContentBlock = ({
           direction={direction}
         >
           {icon && (
-            <Col lg={11} md={11} sm={12} xs={24}>
+            <Col
+              lg={11}
+              md={11}
+              sm={12}
+              xs={24}
+              style={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+              }}
+            >
               <SvgIcon
                 src={icon}
                 width={imageSize.width}

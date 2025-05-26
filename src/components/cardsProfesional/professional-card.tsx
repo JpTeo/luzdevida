@@ -1,5 +1,5 @@
 import { Col, Image, Row, Typography } from "antd";
-import Card from "antd/lib/card/Card";
+import { CardStyles, ImageStyle } from "./styles";
 // Definición de los datos de los profesionales
 const professionals = [
   {
@@ -56,25 +56,20 @@ const professionals = [
 export default function ProfessionalCards() {
   return (
     <Row
-      style={{
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        gap: 20,
-        margin: "5% 0",
-      }}
+      gutter={[16, 16]} // horizontal y vertical
+      justify="center"
+      style={{ margin: "5% 0" }}
     >
       {professionals.map((professional) => (
         <Col
           key={professional.id}
           xs={24}
           sm={12}
-          md={12}
+          md={6}
           lg={5}
           className="d-flex items-center"
         >
-          <Card
-            className="custom-card"
+          <CardStyles
             bodyStyle={{
               display: "flex",
               flexDirection: "column",
@@ -82,29 +77,10 @@ export default function ProfessionalCards() {
               height: "100%",
               padding: "20px",
             }}
-            style={{
-              background: "#D3D3D3",
-              width: "15vw",
-              height: "fit-content",
-              minHeight:'16vw',
-               // más alto para evitar que el contenido quede apretado
-              borderRadius: "20px",
-              overflow: "hidden",
-            }}
           >
             {/* Parte superior - imagen */}
             <div style={{ flex: "0 0 auto", marginBottom: "1rem" }}>
-              <Image
-                src={professional.icon}
-                width={200}
-                height={150}
-                style={{
-                  objectFit: "contain",
-                  background: "white",
-                  borderRadius: "20px",
-                }}
-                preview={false}
-              />
+              <ImageStyle src={professional.icon} preview={false} />
             </div>
 
             {/* Parte media - texto */}
@@ -131,7 +107,7 @@ export default function ProfessionalCards() {
                 </Typography>
               )}
             </div>
-          </Card>
+          </CardStyles>
         </Col>
       ))}
     </Row>

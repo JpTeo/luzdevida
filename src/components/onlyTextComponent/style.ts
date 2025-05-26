@@ -5,11 +5,7 @@ interface StyledRowProps {
 }
 export const ContentSection = styled("section")`
   position: relative;
-
-  padding: 2rem;
-  @media only screen and (max-width: 1024px) {
-    padding-bottom: 10rem;
-  }
+  margin: 5%;
 `;
 export const StyledRow = styled(Row).withConfig({
   shouldForwardProp: (prop) => prop !== "direction",
@@ -28,8 +24,18 @@ export const ContentWrapper = styled("div")`
   text-align: center;
   @media only screen and (max-width: 575px) {
     padding-top: 4rem;
+    text-align: center;
   }
   @media only screen and (max-width: 768px) {
     text-align: center;
+  }
+`;
+export const ContainerText = styled("p")`
+  font-size: 1.5rem;
+  width: 70%;
+  margin: auto;
+  padding-bottom: 2%;
+  @media only screen and (max-width: 575px) {
+    width: 100%;
   }
 `;
