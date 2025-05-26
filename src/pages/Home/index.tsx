@@ -49,7 +49,6 @@ const Home = () => {
             width: "70%",
           }}
         />
-
         <ContentBlockOnlyText
           id="nosotros"
           direction="right"
@@ -64,9 +63,8 @@ const Home = () => {
           content={ObjetivoContent.text}
         />
         <SliderComponent ContentSlider={ContentSlider.image} />
-
         <ContentBlock
-          direction="left"
+          direction="right"
           imageSize={{
             height: "100%",
             width: "100%",
@@ -77,6 +75,7 @@ const Home = () => {
           fullWidthSlider
           id="servicios"
         />
+      
         <FooterWithMap
           address={"Senillosa 324, Cdad. Autónoma de Buenos Aires"}
         />

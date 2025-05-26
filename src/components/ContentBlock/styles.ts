@@ -1,17 +1,17 @@
 import { Row } from "antd";
 import styled from "styled-components";
+import { Col } from "antd";
 interface StyledRowProps {
   direction: "left" | "right";
 }
+
 export const ContentSection = styled("section")`
   position: relative;
-  margin: 10rem 0;
   @media only screen and (max-width: 1024px) {
     padding-bottom: 0rem;
   }
 `;
 export const Content = styled("p")`
-  margin: 1.5rem 0 2rem 0;
   @media only screen and (max-width: 768px) {
     text-align: center;
   }
@@ -26,8 +26,10 @@ export const StyledRow = styled(Row).withConfig({
 
 export const ContentWrapper = styled("div")`
   position: relative;
-  max-width: 540px;
-
+  display: inline-block;
+  aling-items: center;
+  justify-content: center;
+  width: 100% !important;
   @media only screen and (max-width: 575px) {
     padding-top: 4rem;
   }
@@ -66,9 +68,23 @@ export const ButtonWrapper = styled("div")`
     justify-content: center;
   }
   button:last-child {
-    margin-left: 20px;
     @media only screen and (max-width: 768px) {
-      margin-left: 0px;
     }
+  }
+`;
+// styles.ts
+
+export const ColImage = styled(Col)`
+  order: 2;
+
+  @media (min-width: 768px) {
+    order: 1 !important;
+  }
+`;
+
+export const ColText = styled(Col)`
+  order: 1;
+  @media (min-width: 768px) {
+    order: 2;
   }
 `;

@@ -11,7 +11,7 @@ export const CardStyles = styled(Card)`
   height: 20vw;
   @media only screen and (min-width: 575px) and (max-width: 1024px) {
     padding-bottom: 0rem;
-    height: 35vw;
+    height: 28vw !important;
   }
   @media only screen and (min-width: 320px) and (max-width: 575px) {
     height: fit-content;
@@ -27,7 +27,7 @@ export const ImageStyle = styled(Image)`
   border-radius: 20px;
   width: 100%;
   @media only screen and (min-width: 575px) and (max-width: 1024px) {
-    height: 15vw;
+    height: 10vw;
   }
   @media only screen and (min-width: 320px) and (max-width: 575px) {
     height: 20vw;

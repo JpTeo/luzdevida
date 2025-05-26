@@ -5,11 +5,12 @@ interface StyledRowProps {
 }
 export const ContentSection = styled("section")`
   position: relative;
-  margin: 5%;
 `;
 export const StyledRow = styled(Row).withConfig({
   shouldForwardProp: (prop) => prop !== "direction",
 })<StyledRowProps>`
+  display: flex;
+
   flex-direction: ${({ direction }) =>
     direction === "left" ? "row" : "row-reverse"};
 `;
@@ -32,10 +33,7 @@ export const ContentWrapper = styled("div")`
 `;
 export const ContainerText = styled("p")`
   font-size: 1.5rem;
-  width: 70%;
-  margin: auto;
+  width: 100%;
   padding-bottom: 2%;
-  @media only screen and (max-width: 575px) {
-    width: 100%;
-  }
+  padding: 0 15%;
 `;

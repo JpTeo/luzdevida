@@ -1,4 +1,4 @@
-import { Col, Image, Row, Typography } from "antd";
+import { Col, Row, Typography } from "antd";
 import { CardStyles, ImageStyle } from "./styles";
 // Definición de los datos de los profesionales
 const professionals = [
@@ -58,7 +58,6 @@ export default function ProfessionalCards() {
     <Row
       gutter={[16, 16]} // horizontal y vertical
       justify="center"
-      style={{ margin: "5% 0" }}
     >
       {professionals.map((professional) => (
         <Col
@@ -79,7 +78,7 @@ export default function ProfessionalCards() {
             }}
           >
             {/* Parte superior - imagen */}
-            <div style={{ flex: "0 0 auto", marginBottom: "1rem" }}>
+            <div style={{ flex: "0 0 auto" }}>
               <ImageStyle src={professional.icon} preview={false} />
             </div>
 

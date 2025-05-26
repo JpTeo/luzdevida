@@ -5,6 +5,7 @@ export const StyledContainer = styled("div")<{
 }>`
   position: relative;
   width: 100%;
+  gap: 10rem !important;
   max-width: 80vw;
   margin-right: auto;
   margin-left: auto;

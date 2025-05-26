@@ -12,6 +12,8 @@ import {
   ButtonWrapper,
   MinTitle,
   MinPara,
+  ColText,
+  ColImage,
 } from "./styles";
 import SliderComponent from "../slider/Slider";
 
@@ -37,16 +39,16 @@ const ContentBlock = ({
     <ContentSection>
       <Fade direction={direction} triggerOnce>
         <StyledRow
-          justify="space-between"
           align="middle"
+          justify={"space-between"}
           id={id}
           direction={direction}
         >
           {icon && (
-            <Col
+            <ColImage
               lg={11}
               md={11}
-              sm={12}
+              sm={24}
               xs={24}
               style={{
                 display: "flex",
@@ -59,72 +61,47 @@ const ContentBlock = ({
                 width={imageSize.width}
                 height={imageSize.height}
               />
-            </Col>
+            </ColImage>
           )}
+
           {sliderContent && (
-            <Col lg={11} md={11} sm={12} xs={24}>
-              <div>
-                <SliderComponent
-                  ContentSlider={sliderContent}
-                  fullWidth={fullWidthSlider}
-                />
-              </div>
-            </Col>
+            <ColImage lg={11} md={11} sm={24} xs={24}>
+              <SliderComponent
+                ContentSlider={sliderContent}
+                fullWidth={fullWidthSlider}
+              />
+            </ColImage>
           )}
-          <Col lg={11} md={11} sm={11} xs={24}>
+
+          <ColText lg={11} md={12} sm={24} xs={24}>
             <ContentWrapper>
               <h6>{title}</h6>
               <Content>{content}</Content>
               <ButtonWrapper>
-                {button?.map(
-                  (
-                    item: {
-                      color?: string;
-                      title: string;
-                    },
-                    id: number
-                  ) => {
-                    return (
-                      <Button
-                        key={id}
-                        color={item.color}
-                        onClick={() => scrollTo("about")}
-                      >
-                        {item.title}
-                      </Button>
-                    );
-                  }
-                )}
+                {button?.map((item, id) => (
+                  <Button
+                    key={id}
+                    color={item.color}
+                    onClick={() => scrollTo("about")}
+                  >
+                    {item.title}
+                  </Button>
+                ))}
               </ButtonWrapper>
               <ServiceWrapper>
                 <Row justify="space-between">
                   {typeof section === "object" &&
-                    section?.map(
-                      (
-                        item: {
-                          title: string;
-                          content: string;
-                          icon: string;
-                        },
-                        id: number
-                      ) => {
-                        return (
-                          <Col key={id} span={11}>
-                            <SvgIcon
-                              src={item.icon}
-                              width="60px"
-                              height="60px"
-                            />
-                            <MinTitle>{item.title}</MinTitle>
-                            <MinPara>{item.content}</MinPara>
-                          </Col>
-                        );
-                      }
-                    )}
+                    section?.map((item, id) => (
+                      <Col key={id} span={11}>
+                        <SvgIcon src={item.icon} width="60px" height="60px" />
+                        <MinTitle>{item.title}</MinTitle>
+                        <MinPara>{item.content}</MinPara>
+                      </Col>
+                    ))}
                 </Row>
               </ServiceWrapper>
             </ContentWrapper>
-          </Col>
+          </ColText>
         </StyledRow>
       </Fade>
     </ContentSection>

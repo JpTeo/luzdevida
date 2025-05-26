@@ -94,7 +94,7 @@ export const ButtonContainer = styled.div`
   display: flex;
   margin-top: 2rem;
   width: 10vw;
-  @media (max-width: 10401x) {
+  @media (max-width: 1040px) {
     flex-direction: column;
     width: 35vw;
     min-width: fit-content;

@@ -50,7 +50,7 @@ const Footer = () => {
           <Col xs={24} md={12}>
             <NavLink to="/">
               <DivImage>
-                <Image src="/img/logosNuevos/logo1.png" height={"6vw"} />
+                <Image src="/img/logosNuevos/logo1.png" height={"100%"} />
               </DivImage>
             </NavLink>
           </Col>
