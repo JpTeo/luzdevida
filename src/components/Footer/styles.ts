@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import { Col } from "antd";
 
 export const Title = styled("h4")`
   font-size: 22px;
@@ -48,7 +49,12 @@ export const DivImage = styled("div")`
     height: 5rem;
   }
 `;
-
+export const ColImage = styled(Col)`
+  display: flex;
+  @media (max-width: 425px) {
+    justify-content: flex-end;
+  }
+`;
 export const Extra = styled("section")`
   position: relative;
   width: 100%;

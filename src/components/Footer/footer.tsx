@@ -1,7 +1,7 @@
 "use client";
 
 import type React from "react";
-import { NavLink, Extra, FooterContainer, DivImage } from "./styles";
+import { NavLink, Extra, FooterContainer, DivImage, ColImage } from "./styles";
 import { Col, Image, Row, Typography } from "antd";
 import {
   FacebookOutlined,
@@ -47,13 +47,13 @@ const Footer = () => {
             justifyContent: "space-between",
           }}
         >
-          <Col xs={24} md={12}>
+          <ColImage xs={24} md={12}>
             <NavLink to="/">
               <DivImage>
                 <Image src="/img/logosNuevos/logo1.png" height={"100%"} />
               </DivImage>
             </NavLink>
-          </Col>
+          </ColImage>
           <Col xs={24} md={12} style={{ textAlign: "right" }}>
             <div style={{ color: "black" }}>
               <Typography.Title
