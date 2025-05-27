@@ -2,40 +2,40 @@ import { Col, Row, Typography } from "antd";
 import { CardStyles, ImageStyle } from "./styles";
 // Definición de los datos de los profesionales
 const professionals = [
-  {
+    {
     id: 1,
-    title: "Yoga",
-    name: "Carina Conti",
-    license: "",
-    icon: "img/icons/yoga-icon.png",
-  },
-  {
-    id: 2,
-    title: "Kinesiología",
-    name: "Jesica Juan",
-    license: "M.N. 01344",
-    icon: "img/icons/kinesiology-icon.png",
-  },
-  {
-    id: 3,
-    title: "Psicología",
-    name: "Monica Slonimski",
-    license: "M.N. 39133",
-    icon: "img/icons/psychology-icon.png",
-  },
-  {
-    id: 4,
     title: "Director médico",
     name: "Jorge Mario Muszkat",
     license: "M.N. 62.998",
     icon: "img/icons/medical-icon.png",
   },
   {
-    id: 5,
+    id: 2,
     title: "Lic en nutrición",
     name: "Lic.Karina J.E. Lusa",
     license: "M.N. 4512",
     icon: "img/icons/nutrition-icon.png",
+  },
+    {
+    id: 3,
+    title: "Psicología",
+    name: "Monica Slonimski",
+    license: "M.N. 39133",
+    icon: "img/icons/psychology-icon.png",
+  },
+    {
+    id: 4,
+    title: "Kinesiología",
+    name: "Jesica Juan",
+    license: "M.N. 01344",
+    icon: "img/icons/kinesiology-icon.png",
+  },
+  {
+    id: 5,
+    title: "Yoga",
+    name: "Carina Conti",
+    license: "",
+    icon: "img/icons/yoga-icon.png",
   },
   {
     id: 6,
