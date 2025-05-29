@@ -5,33 +5,19 @@ interface StyledRowProps {
 }
 export const ContentSection = styled("section")`
   position: relative;
-  margin-top: 5%
+  margin-top: 5%;
 `;
 export const StyledRow = styled(Row).withConfig({
   shouldForwardProp: (prop) => prop !== "direction",
 })<StyledRowProps>`
   display: flex;
-
+  display: flex;
+  aling-items: center;
+  justify-content: center;
   flex-direction: ${({ direction }) =>
     direction === "left" ? "row" : "row-reverse"};
 `;
 
-export const ContentWrapper = styled("div")`
-  position: relative;
-  width: 100%;
-  display: flex;
-  align-tems: center;
-  flex-direction: column;
-  justify-content: flex-start !important;
-  text-align: center;
-  @media only screen and (max-width: 575px) {
-    padding-top: 4rem;
-    text-align: center;
-  }
-  @media only screen and (max-width: 768px) {
-    text-align: center;
-  }
-`;
 export const ContainerText = styled("p")`
   font-size: 1.5rem;
   width: 100%;

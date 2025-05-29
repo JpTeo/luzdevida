@@ -1,0 +1,50 @@
+import WhatsAppButton from "../../common/Button/Flotante/WhatsApp";
+import Container from "../../common/Container";
+import ScrollToTop from "../../common/ScrollToTop";
+import ContentBlockCopy from "../../components/ContentBlockPersonalizado";
+import data from "../../content/nuestroEquipo.json";
+import React from "react"; // Necesario si usas React
+import { NuestroEquipoData } from "../../types/NuestroEquipo";
+import CardProfessional from "../../components/cardsProfesional/Card";
+
+const NuestroEquipo = () => {
+  console.log(Container, "asas container");
+  const nuestroEquipo = data as NuestroEquipoData;
+  return (
+    <>
+      <WhatsAppButton />
+      <ScrollToTop />
+      <Container>
+        <br></br>
+        <br></br>
+        {nuestroEquipo.professionals.map((item) => (
+          <ContentBlockCopy
+            key={item.id}
+            direction={item.direction}
+            title={item.name}
+            content={item.content || ""}
+            Icon={
+              <CardProfessional
+                id={item.id}
+                title={item.title}
+                name={item.name}
+                license={item.license}
+                icon={item.icon}
+                direction={item.direction}
+              />
+            }
+            id="product"
+            imageSize={{
+              height: "auto",
+              width: "70%",
+            }}
+          />
+        ))}
+
+        <br></br>
+      </Container>
+    </>
+  );
+};
+
+export default NuestroEquipo;

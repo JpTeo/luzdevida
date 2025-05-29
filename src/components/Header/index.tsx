@@ -14,6 +14,7 @@ import {
   Outline,
   Span,
 } from "./styles";
+import { useHistory } from "react-router-dom";
 
 const Header = () => {
   const [visible, setVisibility] = useState(false);
@@ -21,7 +22,7 @@ const Header = () => {
   const toggleButton = () => {
     setVisibility(!visible);
   };
-
+  const history = useHistory();
   const MenuItem = () => {
     const scrollTo = (id: string) => {
       const element = document.getElementById(id) as HTMLDivElement;
@@ -32,7 +33,7 @@ const Header = () => {
     };
     return (
       <>
-        <CustomNavLinkSmall onClick={() => scrollTo("intro")}>
+        <CustomNavLinkSmall onClick={() => history.push("/")}>
           <Span>{"Inicio"}</Span>
         </CustomNavLinkSmall>
         <CustomNavLinkSmall onClick={() => scrollTo("nosotros")}>
@@ -58,7 +59,11 @@ const Header = () => {
       <Container>
         <Row justify="space-between">
           <LogoContainer to="/" aria-label="homepage">
-            <SvgIcon src="/img/logosNuevos/logo1.png" width="120px" height="120px" />
+            <SvgIcon
+              src="/img/logosNuevos/logo1.png"
+              width="120px"
+              height="120px"
+            />
           </LogoContainer>
           <NotHidden>
             <MenuItem />

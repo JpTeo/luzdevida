@@ -4,13 +4,21 @@ import "swiper/css";
 import "swiper/css/navigation";
 import { Navigation, Autoplay } from "swiper/modules";
 import "./SliderComponent.css"; // si querés estilos personalizados
+import { SvgIcon } from "../../common/SvgIcon";
 
 interface SliderProps {
   ContentSlider: string[];
   fullWidth?: boolean;
+  height: string;
+  width: string;
 }
 
-const SliderComponent = ({ ContentSlider, fullWidth }: SliderProps) => {
+const SliderComponent = ({
+  ContentSlider,
+  fullWidth,
+  height,
+  width,
+}: SliderProps) => {
   return (
     <Swiper
       modules={[Navigation, Autoplay]}
@@ -31,16 +39,21 @@ const SliderComponent = ({ ContentSlider, fullWidth }: SliderProps) => {
         >
           <div
             style={{
-              height: "100vw",
-              width: "100%",
-              backgroundImage: `url(${item})`,
-              backgroundSize: "cover",
-              backgroundPosition: "center",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              height: `${height}`,
+              width: `${width}`,
+              overflow: "hidden",
               borderRadius: "20px",
+              // backgroundImage: `url(${item})`,
+              // backgroundSize: "cover",
+              // backgroundPosition: "bottom",
+              // borderRadius: "20px",
             }}
-          />
-          {/* ) : (
-            <SvgIcon src={item} width="unset" height="100%" /> */}
+          >
+            <SvgIcon src={item} width="unset" height="100%" />
+          </div>
         </SwiperSlide>
       ))}
     </Swiper>

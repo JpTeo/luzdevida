@@ -49,13 +49,18 @@ const Home = () => {
             width: "70%",
           }}
         />
-         <br></br>
+        <br></br>
         <ContentBlockOnlyText
           id="nosotros"
           direction="right"
           title={MissionContent.title}
           content={MissionContent.text}
+          button={{
+            title: "Ver detalles sobre el equipo",
+            router: "/NuestroEquipo",
+          }}
         />
+
         <ProfessionalCards />
         <ContentBlockOnlyText
           id="objetivo"
@@ -63,7 +68,11 @@ const Home = () => {
           title={ObjetivoContent.title}
           content={ObjetivoContent.text}
         />
-        <SliderComponent ContentSlider={ContentSlider.image} />
+        <SliderComponent
+          ContentSlider={ContentSlider.image}
+          height={"40rem"}
+          width={"60rem"}
+        />
         <ContentBlock
           direction="right"
           imageSize={{
@@ -76,7 +85,7 @@ const Home = () => {
           fullWidthSlider
           id="servicios"
         />
-    
+
         <FooterWithMap
           address={"Senillosa 324, Cdad. Autónoma de Buenos Aires"}
         />

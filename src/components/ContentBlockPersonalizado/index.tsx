@@ -1,6 +1,6 @@
 import { Col, Row } from "antd";
 import { Fade } from "react-awesome-reveal";
-import { ContentBlockProps } from "./types";
+import { ContentBlockCopyProps } from "./types";
 import { Button } from "../../common/Button";
 import { SvgIcon } from "../../common/SvgIcon";
 import {
@@ -17,8 +17,8 @@ import {
 } from "./styles";
 import SliderComponent from "../slider/Slider";
 
-const ContentBlock = ({
-  icon,
+const ContentBlockCopy = ({
+  Icon,
   imageSize,
   title,
   content,
@@ -28,7 +28,7 @@ const ContentBlock = ({
   button,
   id,
   direction,
-}: ContentBlockProps) => {
+}: ContentBlockCopyProps) => {
   const scrollTo = (id: string) => {
     const element = document.getElementById(id) as HTMLDivElement;
     element.scrollIntoView({
@@ -44,7 +44,7 @@ const ContentBlock = ({
           id={id}
           direction={direction}
         >
-          {icon && (
+          {Icon && (
             <ColImage
               lg={11}
               md={11}
@@ -56,22 +56,7 @@ const ContentBlock = ({
                 justifyContent: "center",
               }}
             >
-              <SvgIcon
-                src={icon}
-                width={imageSize.width}
-                height={imageSize.height}
-              />
-            </ColImage>
-          )}
-
-          {sliderContent && (
-            <ColImage lg={11} md={11} sm={24} xs={24}>
-              <SliderComponent
-                height={"30rem"}
-                width={"30rem"}
-                ContentSlider={sliderContent}
-                fullWidth={fullWidthSlider}
-              />
+              {Icon}
             </ColImage>
           )}
 
@@ -110,4 +95,4 @@ const ContentBlock = ({
   );
 };
 
-export default ContentBlock;
+export default ContentBlockCopy;
