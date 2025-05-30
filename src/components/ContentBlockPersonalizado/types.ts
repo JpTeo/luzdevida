@@ -5,6 +5,7 @@ export interface ContentBlockCopyProps {
   imageSize: { height: string; width: string };
   fullWidthSlider?: boolean;
   sliderContent?: string[];
+  name?: string;
   section?: {
     title: string;
     content: string;

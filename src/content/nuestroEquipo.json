@@ -1,10 +1,7 @@
-
-
-
 {
   "professionals": [
     {
-      "id": 4,
+      "id": 1,
       "direction": "left",
       "title": "Director médico",
       "name": "Jorge Mario Muszkat",
@@ -13,49 +10,49 @@
       "content": "Especialista en Geriatria, en el Hogar realizo el seguimiento de las patologias crònicas y deteccion precoz de cualquier anomalìa aguda que se presente pudiendo participar interdisciplinariamente de la planificacion,y seguimiento de los tratamientos instituidos."
     },
     {
-      "id": 1,
+      "id": 2,
+      "title": "Lic en nutrición",
       "direction": "right",
-      "title": "Yoga",
-      "name": "Carina Conti",
-      "license": "",
-      "icon": "img/icons/yoga-icon.png",
-      "content": "El taller de Yogaterapia tiene como fin trabajar las distintas posibilidades motrices y cognitivas de los residentes. Utilizamos la técnica milenaria del yoga para ayudarlos a comprender que somos cuerpo, mente y espíritu. Se trabaja con técnicas de relajacion y respiracion yoguica.también trabajamos con elementos para el fortalecimiento de su cuerpo.Es un taller corporal y espiritual."
+      "name": "Lic. Karina J.E. Lusa",
+      "license": "M.N. 4512",
+      "icon": "img/icons/nutrition-icon.png",
+      "content": "Trabajo hace 20 años con Adultos Mayores y soy responsable del Servicio de Alimentación de nuestros Alojados.\nNuestra labor contempla integralmente al residente en todos los aspectos como ser bio psico social relacionados con su bienestar.\n\n1. Mejorar la salud y el bienestar: Mejorar la salud y el bienestar de los residentes a través de una nutrición adecuada.\n\n2. Prevenir enfermedades: Prevenir enfermedades relacionadas con la alimentación, como la desnutrición o la obesidad.\n\n3. Mejorar la calidad de vida: Mejorar la calidad de vida de los residentes al proporcionarles alimentos saludables y apetitosos."
     },
     {
-      "id": 2,
-      "title": "Kinesiología",
+      "id": 3,
+      "title": "Psicología",
       "direction": "left",
-      "name": "Jesica Juan",
+      "name": "Lic. Monica Slonimski",
+      "license": "M.N. 39133",
+      "icon": "img/icons/psychology-icon.png",
+      "content": "El Proyecto de Trabajo en el área de la clínica psicóloga, señala el favorecimiento de estrategias de prevención y mantenimiento de las capacidades mentales y físicas de la población de los adultos mayores que viven en el Instituto Luz de Vida.\nPartiendo del hecho de que las personas alojadas tienen características mentales, físicas y socioculturales diferentes.\nIntentamos promover una cultura de envejecimiento activo, a través de la participación en charlas, leyendo artículos varios, su posterior debate e inquietudes que posean.\nEspacio de trabajo de contención individual, seguimiento y control en la evolución gerontológica de la atención clínica.\nEspacio de trabajo de contención a familiares de los Recidentes.\nSiendo el objetivo final del Proyecto de Trabajo planteado: la integridad psicológica, física, calidad de vida y desarrollo del sentimiento de autonomía del Recidente de Luz de Vida."
+    },
+    {
+      "id": 4,
+      "title": "Kinesiología",
+      "direction": "right",
+      "name": "Jessica Juan",
       "license": "M.N. 01344",
       "icon": "img/icons/kinesiology-icon.png",
       "content": "El adulto mayor se encuentra en más riesgo de sufrir lesiones, por lo tanto es fundamental una prevención, mantención y/o rehabilitación de su cuerpo. En este aspecto la kinesiología aporta beneficios esenciales para una mejor calidad de vida, tanto física como emocional.\n\nEs muy importante que las personas adultas mantengan una actividad física dentro de lo que su capacidad permita. Entre los beneficios de la kinesiología destacan:\n✓ Conservar y mantener la fuerza para poder seguir siendo independientes.\n✓ Tener más energía para hacer las cosas que desea hacer.\n✓ Mejorar el equilibrio.\n✓ Prevenir o detener algunas enfermedades como diabetes, hipertensión arterial, enfermedades coronarias y cáncer.\n✓ Mejorar su estado de ánimo y disminuir el estado de depresión.\nPor otro lado, es muy importante que la familia tome conciencia sobre el tema de la prevención y rehabilitación del residente, ya que una persona que siente apoyo emocional de su círculo cercano, podrá tener mejores resultados."
     },
     {
-      "id": 3,
-      "title": "Psicología",
-      "direction": "right",
-      "name": "Monica Slonimski",
-      "license": "M.N. 39133",
-      "icon": "img/icons/psychology-icon.png",
-      "content": "El Proyecto de Trabajo en el área de la clínica psicóloga, señala el favorecimiento de estrategias de prevención y mantenimiento de las capacidades mentales y físicas de la población de los adultos mayores que viven en el Instituto Luz de Vida.\nPartiendo del hecho de que las personas alojadas tienen características mentales, físicas y socioculturales diferentes.\nIntentamos promover una cultura de envejecimiento activo, a través de la participación en charlas, leyendo artículos varios, su posterior debate e inquietudes que posean.\nEspacio de trabajo de contención individual, seguimiento y control en la evolución gerontológica de la atención clínica.\nEspacio de trabajo de contención a familiares de los Recidentes.\nSiendo el objetivo final del Proyecto de Trabajo planteado: la integridad psicológica, física, calidad de vida y desarrollo del sentimiento de autonomía del Recidente de Luz de Vida."
-    },
-
-    {
       "id": 5,
-      "title": "Lic en nutrición",
-      "direction": "left",
-      "name": "Lic.Karina J.E. Lusa",
-      "license": "M.N. 4512",
-      "icon": "img/icons/nutrition-icon.png"
-    },
-    {
-      "id": 6,
       "title": "Musicoterapia",
-      "direction": "right",
+      "direction": "left",
       "name": "Daniela Arévalo",
       "license": "",
       "icon": "img/icons/music-icon.png",
       "content": "La musicoterapia es una disciplina de la salud que utiliza el recurso sonoro-musical para potenciar los núcleos salugénicos y aumentar y mantener la reserva cognitiva de nuestros residentes. A través de encuentros grupales, favorecemos el encuentro y el intercambio entre pares, fortaleciendo lazos afectivos y evitando el aislamiento. Nuestro objetivo es mejorar la calidad de vida de nuestros residentes, proporcionando un espacio terapéutico motivador, estimulante y enriquecedor, a través del trabajo con canciones significativas."
+    },
+    {
+      "id": 6,
+      "direction": "right",
+      "title": "Yogaterapia",
+      "name": "Carina Conti",
+      "license": "",
+      "icon": "img/icons/yoga-icon.png",
+      "content": "El taller de Yogaterapia tiene como fin trabajar las distintas posibilidades motrices y cognitivas de los residentes. Utilizamos la técnica milenaria del yoga para ayudarlos a comprender que somos cuerpo, mente y espíritu. Se trabaja con técnicas de relajacion y respiracion yoguica.también trabajamos con elementos para el fortalecimiento de su cuerpo.Es un taller corporal y espiritual."
     },
     {
       "id": 7,

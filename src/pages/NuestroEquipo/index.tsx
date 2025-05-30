@@ -3,7 +3,6 @@ import Container from "../../common/Container";
 import ScrollToTop from "../../common/ScrollToTop";
 import ContentBlockCopy from "../../components/ContentBlockPersonalizado";
 import data from "../../content/nuestroEquipo.json";
-import React from "react"; // Necesario si usas React
 import { NuestroEquipoData } from "../../types/NuestroEquipo";
 import CardProfessional from "../../components/cardsProfesional/Card";
 
@@ -21,8 +20,9 @@ const NuestroEquipo = () => {
           <ContentBlockCopy
             key={item.id}
             direction={item.direction}
-            title={item.name}
+            title={item.title}
             content={item.content || ""}
+            name={item.name}
             Icon={
               <CardProfessional
                 id={item.id}

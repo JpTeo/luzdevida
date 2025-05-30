@@ -1,33 +1,25 @@
-import { Col, Row } from "antd";
 import { Fade } from "react-awesome-reveal";
 import { ContentBlockCopyProps } from "./types";
 import { Button } from "../../common/Button";
-import { SvgIcon } from "../../common/SvgIcon";
 import {
   ContentSection,
   Content,
   ContentWrapper,
-  ServiceWrapper,
   StyledRow,
   ButtonWrapper,
   MinTitle,
-  MinPara,
   ColText,
   ColImage,
 } from "./styles";
-import SliderComponent from "../slider/Slider";
 
 const ContentBlockCopy = ({
   Icon,
-  imageSize,
   title,
   content,
-  sliderContent,
-  section,
-  fullWidthSlider,
   button,
   id,
   direction,
+  name,
 }: ContentBlockCopyProps) => {
   const scrollTo = (id: string) => {
     const element = document.getElementById(id) as HTMLDivElement;
@@ -62,7 +54,8 @@ const ContentBlockCopy = ({
 
           <ColText lg={11} md={12} sm={24} xs={24}>
             <ContentWrapper>
-              <h6>{title}</h6>
+              <h6>{name}</h6>
+              <MinTitle>{title}</MinTitle>
               <Content>{content}</Content>
               <ButtonWrapper>
                 {button?.map((item, id) => (
@@ -75,18 +68,6 @@ const ContentBlockCopy = ({
                   </Button>
                 ))}
               </ButtonWrapper>
-              <ServiceWrapper>
-                <Row justify="space-between">
-                  {typeof section === "object" &&
-                    section?.map((item, id) => (
-                      <Col key={id} span={11}>
-                        <SvgIcon src={item.icon} width="60px" height="60px" />
-                        <MinTitle>{item.title}</MinTitle>
-                        <MinPara>{item.content}</MinPara>
-                      </Col>
-                    ))}
-                </Row>
-              </ServiceWrapper>
             </ContentWrapper>
           </ColText>
         </StyledRow>
