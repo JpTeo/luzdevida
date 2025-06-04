@@ -25,6 +25,7 @@ const SliderComponent = ({
       navigation
       autoplay={{ delay: 4000 }}
       className="mySwiper"
+      style={{ height: height,  }}
     >
       {ContentSlider.map((item, index) => (
         <SwiperSlide
@@ -42,8 +43,8 @@ const SliderComponent = ({
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
-              height: `${height}`,
-              width: `${width}`,
+              height: `100%`,
+              width: `100%`,
               overflow: "hidden",
               borderRadius: "20px",
               // backgroundImage: `url(${item})`,

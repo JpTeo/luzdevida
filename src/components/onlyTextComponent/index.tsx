@@ -1,5 +1,5 @@
 import { Button } from "../../common/Button";
-import { ContainerText, ContentSection, StyledRow } from "./style";
+import { ContentSection, StyledRow } from "./style";
 import { Fade } from "react-awesome-reveal";
 import { useHistory } from "react-router-dom";
 
@@ -29,8 +29,17 @@ const ContentBlockOnlyText = ({
     <ContentSection id={id}>
       <Fade direction={direction} triggerOnce>
         <StyledRow align="middle" direction={direction}>
-          <h5>{title}</h5>
-          <ContainerText>{content}</ContainerText>
+          <h5 style={{ textAlign: "center" }}>{title}</h5>
+          <p
+            style={{
+              textAlign: "center",
+              fontSize: "1.5rem",
+              width: "100%",
+              padding: "2% 5%",
+            }}
+          >
+            {content}
+          </p>
           {button && (
             <div
               style={{

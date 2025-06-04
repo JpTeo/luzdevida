@@ -16,7 +16,21 @@ import {
   ColImage,
 } from "./styles";
 import SliderComponent from "../slider/Slider";
+import { useEffect, useState } from "react";
 
+const useWindowWidth = () => {
+  const [width, setWidth] = useState<number>(
+    typeof window !== "undefined" ? window.innerWidth : 0
+  );
+
+  useEffect(() => {
+    const handleResize = () => setWidth(window.innerWidth);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  return width;
+};
 const ContentBlock = ({
   icon,
   imageSize,
@@ -35,6 +49,15 @@ const ContentBlock = ({
       behavior: "smooth",
     });
   };
+
+  const windowWidth = useWindowWidth();
+
+  const sliderSize = (() => {
+    if (windowWidth < 576) return { height: "30rem", width: "100vw" }; // móvil
+    if (windowWidth < 992) return { height: "25rem", width: "25rem" }; // tablet
+    return { height: "40rem", width: "30rem" }; // desktop
+  })();
+  console.log(windowWidth, "ASASAS WIDTH", sliderSize);
   return (
     <ContentSection>
       <Fade direction={direction} triggerOnce>
@@ -67,8 +90,8 @@ const ContentBlock = ({
           {sliderContent && (
             <ColImage lg={11} md={11} sm={24} xs={24}>
               <SliderComponent
-                height={"30rem"}
-                width={"30rem"}
+                height={sliderSize.height}
+                width={sliderSize.width}
                 ContentSlider={sliderContent}
                 fullWidth={fullWidthSlider}
               />

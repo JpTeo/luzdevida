@@ -17,10 +17,3 @@ export const StyledRow = styled(Row).withConfig({
   flex-direction: ${({ direction }) =>
     direction === "left" ? "row" : "row-reverse"};
 `;
-
-export const ContainerText = styled("p")`
-  font-size: 1.5rem;
-  width: 100%;
-  padding-bottom: 2%;
-  padding: 0 15%;
-`;
