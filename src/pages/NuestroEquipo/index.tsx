@@ -7,7 +7,6 @@ import { NuestroEquipoData } from "../../types/NuestroEquipo";
 import CardProfessional from "../../components/cardsProfesional/Card";
 
 const NuestroEquipo = () => {
-  console.log(Container, "asas container");
   const nuestroEquipo = data as NuestroEquipoData;
   return (
     <>

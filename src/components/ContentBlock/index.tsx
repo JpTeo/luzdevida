@@ -57,7 +57,6 @@ const ContentBlock = ({
     if (windowWidth < 992) return { height: "25rem", width: "25rem" }; // tablet
     return { height: "40rem", width: "30rem" }; // desktop
   })();
-  console.log(windowWidth, "ASASAS WIDTH", sliderSize);
   return (
     <ContentSection>
       <Fade direction={direction} triggerOnce>

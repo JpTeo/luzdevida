@@ -26,21 +26,13 @@ export const useForm = (validate: { (values: IValues): IValues }) => {
     event.preventDefault();
     event.persist(); // ✅ agrega esto
     const values = formState.values;
-    console.log("handleSubmit iniciado", values);
 
     const errors = validate(values);
-
-    console.log("handleSubmit iniciado", values);
-
     setFormState((prevState) => ({ ...prevState, errors }));
-    console.log("entra");
     if (Object.values(errors).every((error) => error === "")) {
-      console.log("No hay errores, enviando correo...");
-      console.log("Service ID:", process.env.REACT_APP_SERVICE_ID);
-      console.log("Template ID:", process.env.REACT_APP_TEMPLATE_ID);
-      console.log("User ID:", process.env.REACT_APP_USER_ID);
+      
       try {
-        const res = await emailjs.send(
+        await emailjs.send(
           process.env.REACT_APP_SERVICE_ID!,
           process.env.REACT_APP_TEMPLATE_ID!,
           {
@@ -50,7 +42,6 @@ export const useForm = (validate: { (values: IValues): IValues }) => {
           },
           process.env.REACT_APP_USER_ID!
         );
-        console.log("EmailJS send response:", res);
 
         setFormState(() => ({
           values: { ...initialValues },
@@ -62,7 +53,6 @@ export const useForm = (validate: { (values: IValues): IValues }) => {
           description: "Tu mensaje fue enviado correctamente.",
         });
       } catch (error) {
-        console.error("EmailJS error", error);
         notification["error"]({
           message: "Error",
           description:
