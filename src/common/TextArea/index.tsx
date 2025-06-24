@@ -1,7 +1,7 @@
 import { StyledTextArea, StyledContainer, Label } from "./styles";
 import { InputProps } from "../types";
 
-const TextArea = ({ name, placeholder, onChange }: InputProps) => (
+const TextArea = ({ name, placeholder, onChange, value }: InputProps) => (
   <StyledContainer>
     <Label htmlFor={name} style={{ color: "white" }}>
       {name}
@@ -11,6 +11,7 @@ const TextArea = ({ name, placeholder, onChange }: InputProps) => (
       id={name}
       name={name}
       onChange={onChange}
+      value={value} // ✅ ahora es controlado
     />
   </StyledContainer>
 );

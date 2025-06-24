@@ -20,7 +20,7 @@ export interface InputProps {
   name: string;
   placeholder: string;
   type?: string;
-  value?: string;
+  value: string;
   onChange: (
     event:
       | React.ChangeEvent<HTMLInputElement>

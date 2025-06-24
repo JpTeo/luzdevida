@@ -27,7 +27,7 @@ const Contact = ({ title, content, id }: ContactProps) => {
           xs={{ span: 24, order: 2 }}
           className="form-column"
         >
-          <Slide direction="left" triggerOnce style={{ width: "100%" }}>
+          <Slide direction="left" style={{ width: "100%" }}>
             <form autoComplete="off" onSubmit={handleSubmit}>
               <Col span={24}>
                 <Input
@@ -37,7 +37,7 @@ const Contact = ({ title, content, id }: ContactProps) => {
                   value={values.nombre || ""}
                   onChange={handleChange}
                 />
-                <ValidationType type="name" />
+                <ValidationType type="nombre" />
               </Col>
               <Col span={24}>
                 <Input
@@ -56,7 +56,7 @@ const Contact = ({ title, content, id }: ContactProps) => {
                   name="mensaje"
                   onChange={handleChange}
                 />
-                <ValidationType type="message" />
+                <ValidationType type="mensaje" />
               </Col>
               <ButtonContainer>
                 <Button name="submit">{"Enviar"}</Button>
