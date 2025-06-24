@@ -28,7 +28,7 @@ const Contact = ({ title, content, id }: ContactProps) => {
           className="form-column"
         >
           <Slide direction="left" triggerOnce style={{ width: "100%" }}>
-            <FormGroup autoComplete="off" onSubmit={handleSubmit}>
+            <form autoComplete="off" onSubmit={handleSubmit}>
               <Col span={24}>
                 <Input
                   type="text"
@@ -53,7 +53,7 @@ const Contact = ({ title, content, id }: ContactProps) => {
                 <TextArea
                   placeholder="mensaje"
                   value={values.mensaje || ""}
-                  name="Mensaje"
+                  name="mensaje"
                   onChange={handleChange}
                 />
                 <ValidationType type="message" />
@@ -61,7 +61,7 @@ const Contact = ({ title, content, id }: ContactProps) => {
               <ButtonContainer>
                 <Button name="submit">{"Enviar"}</Button>
               </ButtonContainer>
-            </FormGroup>
+            </form>
           </Slide>
         </Col>
 

@@ -13,9 +13,6 @@ const initialValues: IValues = {
   email: "",
   mensaje: "",
 };
-const SERVICE_ID = "tu_service_id";
-const TEMPLATE_ID = "tu_template_id";
-const USER_ID = "tu_user_id"; // también puede llamarse publicKey
 
 export const useForm = (validate: { (values: IValues): IValues }) => {
   const [formState, setFormState] = useState<{
@@ -25,27 +22,36 @@ export const useForm = (validate: { (values: IValues): IValues }) => {
     values: { ...initialValues },
     errors: { ...initialValues },
   });
-
-  const handleSubmit = async (event: React.ChangeEvent<HTMLFormElement>) => {
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
+    event.persist(); // ✅ agrega esto
     const values = formState.values;
-    const errors = validate(values);
-    setFormState((prevState) => ({ ...prevState, errors }));
+    console.log("handleSubmit iniciado", values);
 
+    const errors = validate(values);
+
+    console.log("handleSubmit iniciado", values);
+
+    setFormState((prevState) => ({ ...prevState, errors }));
+    console.log("entra");
     if (Object.values(errors).every((error) => error === "")) {
+      console.log("No hay errores, enviando correo...");
+      console.log("Service ID:", process.env.REACT_APP_SERVICE_ID);
+      console.log("Template ID:", process.env.REACT_APP_TEMPLATE_ID);
+      console.log("User ID:", process.env.REACT_APP_USER_ID);
       try {
-        await emailjs.send(
-          SERVICE_ID,
-          TEMPLATE_ID,
+        const res = await emailjs.send(
+          process.env.REACT_APP_SERVICE_ID!,
+          process.env.REACT_APP_TEMPLATE_ID!,
           {
             name: values.nombre,
             email: values.email,
             message: values.mensaje,
           },
-          USER_ID
+          process.env.REACT_APP_USER_ID!
         );
+        console.log("EmailJS send response:", res);
 
-        event.target.reset();
         setFormState(() => ({
           values: { ...initialValues },
           errors: { ...initialValues },

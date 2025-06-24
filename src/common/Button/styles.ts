@@ -4,9 +4,8 @@ export const StyledButton = styled("button")<{ color?: string }>`
   background: ${(p) => p.color || "rgb(255, 255, 255)"};
   color: ${(p) => (p.color ? "#490A3F" : "#490A3F")};
   font-size: 1rem;
-  font-weight: 700;
   width: 100%;
-  height: 100%;
+  height: fit-content;
   border: 1px solid #1d6d67;
   border-radius: 10px;
   padding: 13px 0;
