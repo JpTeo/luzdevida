@@ -55,39 +55,59 @@ const Header = () => {
   };
 
   return (
-    <HeaderSection>
+    <HeaderSection role="banner">
       <Container>
-        <Row justify="space-between">
-          <LogoContainer to="/" aria-label="homepage">
+        <Row justify="space-between" align="middle">
+          {/* Logo con enlace semántico */}
+          <LogoContainer to="/" aria-label="Inicio">
             <SvgIcon
               src="/img/logosNuevos/logo1.png"
-              width="120px"
-              height="120px"
+              aria-hidden="true"
+              width="100"
+              height={"auto"}
             />
           </LogoContainer>
+
           <NotHidden>
-            <MenuItem />
+            <nav role="navigation" aria-label="Menú principal">
+              <MenuItem />
+            </nav>
           </NotHidden>
-          <Burger onClick={toggleButton}>
+
+          <Burger
+            onClick={toggleButton}
+            aria-expanded={visible}
+            aria-controls="mobile-menu"
+            aria-label="Abrir menú"
+          >
             <Outline />
           </Burger>
+
+          <Drawer
+            id="mobile-menu"
+            aria-modal="true"
+            aria-label="Menú de navegación"
+            closable={false}
+            open={visible}
+            onClose={toggleButton}
+          >
+            <Col style={{ marginBottom: "2.5rem" }}>
+              <Label onClick={toggleButton}>
+                <Col span={12}>
+                  <Menu>Menu</Menu>
+                </Col>
+                <Col span={12}>
+                  <Outline />
+                </Col>
+              </Label>
+            </Col>
+            <nav role="navigation" aria-label="Menú móvil">
+              <MenuItem />
+            </nav>
+          </Drawer>
         </Row>
-        <Drawer closable={false} open={visible} onClose={toggleButton}>
-          <Col style={{ marginBottom: "2.5rem" }}>
-            <Label onClick={toggleButton}>
-              <Col span={12}>
-                <Menu>Menu</Menu>
-              </Col>
-              <Col span={12}>
-                <Outline />
-              </Col>
-            </Label>
-          </Col>
-          <MenuItem />
-        </Drawer>
       </Container>
     </HeaderSection>
   );
 };
-
 export default Header;

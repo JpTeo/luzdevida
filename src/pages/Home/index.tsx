@@ -17,7 +17,6 @@ import SEOHead from "../../components/SEOHead";
 
 const Contact = lazy(() => import("../../components/ContactForm"));
 const Container = lazy(() => import("../../common/Container"));
-const ScrollToTop = lazy(() => import("../../common/ScrollToTop"));
 const ContentBlock = lazy(() => import("../../components/ContentBlock"));
 
 const Home = () => {
@@ -31,7 +30,6 @@ const Home = () => {
       />
 
       <WhatsAppButton />
-      <ScrollToTop />
 
       <main>
         <FullWidthContentBlock

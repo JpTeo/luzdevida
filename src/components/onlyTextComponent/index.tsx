@@ -29,7 +29,7 @@ const ContentBlockOnlyText = ({
     <ContentSection id={id}>
       <Fade direction={direction} triggerOnce>
         <StyledRow align="middle" direction={direction}>
-          <h5 style={{ textAlign: "center" }}>{title}</h5>
+          <h2 style={{ textAlign: "center" }}>{title}</h2>
           <p
             style={{
               textAlign: "center",

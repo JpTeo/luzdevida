@@ -1,4 +1,4 @@
-import { Card, Col, Image } from "antd";
+import { Card, Image } from "antd";
 import styled from "styled-components";
 
 export const ColHeight = styled("div")`

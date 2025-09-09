@@ -1,7 +1,6 @@
 import { Col, Row } from "antd";
 import { Fade } from "react-awesome-reveal";
 import { ContentBlockProps } from "./types";
-import { Button } from "../../common/Button";
 import { SvgIcon } from "../../common/SvgIcon";
 import {
   ContentSection,
@@ -9,7 +8,6 @@ import {
   ContentWrapper,
   ServiceWrapper,
   StyledRow,
-  ButtonWrapper,
   MinTitle,
   MinPara,
   ColText,
@@ -43,13 +41,6 @@ const ContentBlock = ({
   id,
   direction,
 }: ContentBlockProps) => {
-  const scrollTo = (id: string) => {
-    const element = document.getElementById(id) as HTMLDivElement;
-    element.scrollIntoView({
-      behavior: "smooth",
-    });
-  };
-
   const windowWidth = useWindowWidth();
 
   const sliderSize = (() => {
@@ -99,19 +90,9 @@ const ContentBlock = ({
 
           <ColText lg={11} md={12} sm={24} xs={24}>
             <ContentWrapper>
-              <h6>{title}</h6>
+              <h1>{title}</h1>
               <Content>{content}</Content>
-              <ButtonWrapper>
-                {button?.map((item, id) => (
-                  <Button
-                    key={id}
-                    color={item.color}
-                    onClick={() => scrollTo("about")}
-                  >
-                    {item.title}
-                  </Button>
-                ))}
-              </ButtonWrapper>
+
               <ServiceWrapper>
                 <Row justify="space-between">
                   {typeof section === "object" &&

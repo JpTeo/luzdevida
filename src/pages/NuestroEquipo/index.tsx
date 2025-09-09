@@ -1,6 +1,5 @@
 import WhatsAppButton from "../../common/Button/Flotante/WhatsApp";
 import Container from "../../common/Container";
-import ScrollToTop from "../../common/ScrollToTop";
 import ContentBlockCopy from "../../components/ContentBlockPersonalizado";
 import data from "../../content/nuestroEquipo.json";
 import { NuestroEquipoData } from "../../types/NuestroEquipo";
@@ -19,18 +18,12 @@ const NuestroEquipo = () => {
       />
 
       <WhatsAppButton />
-      <ScrollToTop />
-
       <main>
         <Container>
           <br></br>
           <br></br>
 
           <section aria-labelledby="team-heading">
-            <h1 id="team-heading" className="sr-only">
-              Nuestro Equipo Profesional
-            </h1>
-
             {nuestroEquipo.professionals.map((item) => (
               <article key={item.id}>
                 <ContentBlockCopy
