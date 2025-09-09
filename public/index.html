@@ -1,13 +1,18 @@
 <!DOCTYPE html>
 <html lang="es">
   <head>
+    <!-- Schema.org mejorado -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "NursingHome",
         "name": "Instituto Luz de Vida",
-        "image": "/images/facility.jpg",",
-        "description": "Residencia geriátrica en Buenos Aires con más de 20 años brindando cuidados especializados y atención médica 24/7",
+        "alternateName": "Residencia Geriátrica Luz de Vida",
+        "image": [
+          "https://www.institutoluzdevida.com.ar/img/logosNuevos/logo1.png",
+          "https://www.institutoluzdevida.com.ar/img/facility.jpg"
+        ],
+        "description": "Residencia geriátrica premium en Buenos Aires con más de 20 años brindando cuidados especializados, atención médica 24/7 y contención emocional para adultos mayores.",
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "Senillosa 324",
@@ -21,8 +26,9 @@
           "latitude": -34.619972,
           "longitude": -58.429472
         },
-        "url": "https://instituluzdevida.com.ar",
+        "url": "https://www.institutoluzdevida.com.ar",
         "telephone": "+5491138259999",
+        "email": "info@institutoluzdevida.com.ar",
         "openingHours": "Mo-Su 00:00-23:59",
         "sameAs": [
           "https://facebook.com/InstitutoLuzDeVida",
@@ -31,19 +37,35 @@
         "amenityFeature": [
           {
             "@type": "LocationFeatureSpecification",
-            "name": "Atención Médica 24/7"
+            "name": "Atención Médica 24/7",
+            "value": true
           },
           {
             "@type": "LocationFeatureSpecification",
-            "name": "Rehabilitación"
+            "name": "Rehabilitación Física",
+            "value": true
           },
           {
             "@type": "LocationFeatureSpecification",
-            "name": "Actividades Recreativas"
+            "name": "Actividades Recreativas",
+            "value": true
+          },
+          {
+            "@type": "LocationFeatureSpecification",
+            "name": "Contención Emocional",
+            "value": true
           }
-        ]
+        ],
+        "priceRange": "$$",
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.8",
+          "reviewCount": "127"
+        }
       }
     </script>
+
+    <!-- Configuración básica -->
     <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <link
@@ -54,58 +76,84 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#ffffff" />
 
-    <!-- Descripción general -->
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#ffffff" />
-
-    <!-- Meta tags descriptivos mejorados -->
+    <!-- SEO Principal -->
+    <title>
+      Instituto Luz de Vida | Residencia Geriátrica Premium en Buenos Aires
+    </title>
     <meta
       name="description"
-      content="Instituto Luz de Vida: residencia geriátrica premium en Buenos Aires. 20+ años brindando cuidados especializados, atención médica 24/7 y contención emocional para adultos mayores. ¡Conozca nuestras instalaciones!"
+      content="Instituto Luz de Vida: residencia geriátrica premium en Buenos Aires con 20+ años de experiencia. Atención médica 24/7, rehabilitación y contención emocional para adultos mayores. ¡Visitanos!"
     />
+
+    <!-- Keywords optimizadas -->
     <meta
       name="keywords"
-      content="geriátrico Buenos Aires, residencia adultos mayores, hogar ancianos zona norte, centro geriátrico Argentina, cuidado tercera edad, residencia geriátrica premium, atención médica 24/7, rehabilitación adultos mayores"
+      content="geriátrico Buenos Aires, residencia adultos mayores, hogar ancianos CABA, centro geriátrico Argentina, cuidado tercera edad, residencia geriátrica premium, atención médica 24/7, rehabilitación adultos mayores, Senillosa 324, geriátrico zona norte"
     />
+
     <meta name="author" content="Instituto Luz de Vida" />
-    <meta name="robots" content="index, follow" />
+    <meta
+      name="robots"
+      content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+    />
+    <link rel="canonical" href="https://www.institutoluzdevida.com.ar/" />
+
     <!-- Geolocalización -->
     <meta name="geo.region" content="AR-B" />
-    <meta name="geo.placename" content="Buenos Aires" />
+    <meta name="geo.placename" content="Buenos Aires, Argentina" />
     <meta name="geo.position" content="-34.619972;-58.429472" />
-    <meta name="ICBM" content="-34.619972;-58.429472" />
+    <meta name="ICBM" content="-34.619972, -58.429472" />
 
-    <!-- Open Graph mejorado -->
+    <!-- Open Graph optimizado -->
     <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Instituto Luz de Vida" />
     <meta
       property="og:title"
       content="Instituto Luz de Vida | Residencia Geriátrica Premium en Buenos Aires"
     />
     <meta
       property="og:description"
-      content="Centro geriátrico especializado con más de 20 años de experiencia en el cuidado y contención de adultos mayores. Atención personalizada 24/7."
+      content="Centro geriátrico especializado con más de 20 años de experiencia en el cuidado y contención de adultos mayores. Atención personalizada 24/7 en Buenos Aires."
     />
-    <meta property="og:image" content="%PUBLIC_URL%/og-image.jpg" />
-    <meta property="og:url" content="https://instituluzdevida.com.ar" />
+    <meta
+      property="og:image"
+      content="https://www.institutoluzdevida.com.ar/og-image.jpg"
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:url" content="https://www.institutoluzdevida.com.ar/" />
     <meta property="og:locale" content="es_AR" />
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@InstitutoLuzDeVida" />
     <meta
       name="twitter:title"
       content="Instituto Luz de Vida | Residencia Geriátrica Premium"
     />
     <meta
       name="twitter:description"
-      content="Centro geriátrico especializado en Buenos Aires. Cuidados profesionales y contención para adultos mayores."
+      content="Centro geriátrico especializado en Buenos Aires. Cuidados profesionales y contención para adultos mayores con más de 20 años de experiencia."
     />
-    <meta name="twitter:image" content="%PUBLIC_URL%/og-image.jpg" />
+    <meta
+      name="twitter:image"
+      content="https://www.institutoluzdevida.com.ar/og-image.jpg"
+    />
+
+    <!-- Preconnect para mejorar performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- DNS Prefetch -->
+    <link rel="dns-prefetch" href="//www.google-analytics.com" />
+    <link rel="dns-prefetch" href="//fonts.googleapis.com" />
   </head>
   <body>
-    <noscript
-      >Necesitás habilitar JavaScript para ejecutar esta aplicación.</noscript
-    >
+    <noscript>
+      Para una mejor experiencia, necesitás habilitar JavaScript en tu navegador
+      para acceder a Instituto Luz de Vida - Residencia Geriátrica en Buenos
+      Aires.
+    </noscript>
     <div id="root"></div>
   </body>
 </html>
