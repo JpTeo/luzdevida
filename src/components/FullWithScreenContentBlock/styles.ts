@@ -85,17 +85,6 @@ export const HeroContent = styled.div`
   }
 `;
 
-export const TextHighlight = styled.h1`
-  color: ;
-  font-size: 4rem;
-  font-weight: bold;
-  font-family: "RedHatDisplay", sans-serif;
-  margin-bottom: 1rem;
-  @media (max-width: 768px) {
-    font-size: 1.5rem;
-  }
-`;
-
 export const MainHeading = styled.h2`
   color: white;
   font-size: 2rem;

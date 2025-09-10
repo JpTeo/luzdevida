@@ -5,7 +5,6 @@ import { Fade } from "react-awesome-reveal";
 import type { ContentBlockProps } from "../ContentBlock/types";
 import { Button } from "../../common/Button";
 import {
-  TextHighlight,
   HeroSection,
   HeroContent,
   MainHeading,
@@ -30,8 +29,16 @@ const FullWidthContentBlock = ({ icon, title, button }: ContentBlockProps) => {
             >
               <Fade direction="left" triggerOnce>
                 <StyledContent>
-                  {/* ✅ H1 ÚNICO Y OPTIMIZADO */}
-                  <TextHighlight>Instituto Luz de Vida</TextHighlight>
+                  <h1
+                    style={{
+                      fontSize: "4rem",
+                      fontWeight: "bold",
+                      fontFamily: "RedHatDisplay, sans-serif",
+                      marginBottom: "1rem",
+                    }}
+                  >
+                    Instituto Luz de Vida
+                  </h1>
                   <MainHeading>
                     Residencia Geriátrica Premium en Buenos Aires
                   </MainHeading>
