@@ -25,7 +25,7 @@ const NuestroEquipo = () => {
             <h1>
               Conocé a Nuestro Equipo Profesional en Instituto Luz de Vida
             </h1>
-            <p>
+            <p style={{ textAlign: "center" }}>
               En <strong>Instituto Luz de Vida</strong> contamos con un{" "}
               <strong>equipo interdisciplinario geriátrico</strong> compuesto
               por <strong>médicos geriatras</strong>,{" "}
