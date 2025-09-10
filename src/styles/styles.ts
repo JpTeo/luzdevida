@@ -58,7 +58,9 @@ export const Styles = createGlobalStyle`
     h2{
         margin-bottom:2%;
     }
-
+    p{
+    text-align: center;
+    }
     h1,
     h2,
     h3,
