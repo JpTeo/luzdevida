@@ -3,9 +3,9 @@ import styled from "styled-components";
 interface StyledRowProps {
   direction: "left" | "right";
 }
-export const ContentSection = styled("section")`
+export const ContentSection = styled("div")`
   position: relative;
-  margin-top: 5%;
+  background: blue;
 `;
 export const StyledRow = styled(Row).withConfig({
   shouldForwardProp: (prop) => prop !== "direction",

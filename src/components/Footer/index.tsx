@@ -45,7 +45,7 @@ const FooterWithMap = ({ address }: ComponentMap) => {
   ];
 
   return (
-    <Extra style={{ marginTop: "10vh" }}>
+    <Extra>
       <Fade direction={"right"} triggerOnce>
         <Row
           gutter={[16, 16]}

@@ -6,7 +6,6 @@ export const Title = styled("h4")`
   font-size: 22px;
   text-transform: capitalize;
   color: #18216d;
-
   @media screen and (max-width: 414px) {
     padding: 1.5rem 0;
   }
@@ -55,7 +54,7 @@ export const ColImage = styled(Col)`
     justify-content: flex-end;
   }
 `;
-export const Extra = styled("section")`
+export const Extra = styled("div")`
   position: relative;
   width: 100%;
   padding: 5%;

@@ -5,6 +5,7 @@ import data from "../../content/nuestroEquipo.json";
 import { NuestroEquipoData } from "../../types/NuestroEquipo";
 import CardProfessional from "../../components/cardsProfesional/Card";
 import SEOHead from "../../components/SEOHead";
+import HeaderContainer from "../../common/Header";
 const NuestroEquipo = () => {
   const nuestroEquipo = data as NuestroEquipoData;
 
@@ -20,9 +21,20 @@ const NuestroEquipo = () => {
       <WhatsAppButton />
       <main>
         <Container>
-          <br></br>
-          <br></br>
-
+          <HeaderContainer>
+            <h1>
+              Conocé a Nuestro Equipo Profesional en Instituto Luz de Vida
+            </h1>
+            <p>
+              En <strong>Instituto Luz de Vida</strong> contamos con un{" "}
+              <strong>equipo interdisciplinario geriátrico</strong> compuesto
+              por <strong>médicos geriatras</strong>,{" "}
+              <strong>enfermeras especializadas</strong>,{" "}
+              <strong>kinesiólogos</strong> y{" "}
+              <strong>profesionales de la tercera edad</strong> dedicados al{" "}
+              <strong>cuidado integral de adultos mayores</strong>.
+            </p>
+          </HeaderContainer>
           <section aria-labelledby="team-heading">
             {nuestroEquipo.professionals.map((item) => (
               <article key={item.id}>

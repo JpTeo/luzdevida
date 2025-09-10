@@ -11,9 +11,9 @@ import {
   MainHeading,
   ButtonContainer,
   StyledContent,
+  IntroParagraph,
 } from "./styles";
 import { redirectWhatsApp } from "../../common/utils/ContactsRedirect";
-
 const FullWidthContentBlock = ({ icon, title, button }: ContentBlockProps) => {
   return (
     <>
@@ -30,11 +30,23 @@ const FullWidthContentBlock = ({ icon, title, button }: ContentBlockProps) => {
             >
               <Fade direction="left" triggerOnce>
                 <StyledContent>
-                  <TextHighlight>{title}</TextHighlight>
+                  {/* ✅ H1 ÚNICO Y OPTIMIZADO */}
+                  <TextHighlight>Instituto Luz de Vida</TextHighlight>
                   <MainHeading>
-                    Conecta con tu cuerpo y tu mente <br /> en un espacio
-                    diseñado para tu bienestar
+                    Residencia Geriátrica Premium en Buenos Aires
                   </MainHeading>
+                  {/* ✅ Párrafo introductorio con keywords para SEO */}
+                  <IntroParagraph>
+                    En <strong>Instituto Luz de Vida </strong>
+                    ofrecemos <strong> atención médica 24/7</strong>, programas
+                    de <strong>rehabilitación</strong> y{" "}
+                    <strong>contención emocional</strong> para{" "}
+                    <strong>adultos mayores</strong>, con más de{" "}
+                    <strong>20 años de experiencia</strong>.
+                  </IntroParagraph>
+
+                  {/* ✅ Subtítulo actual conservado como H2 */}
+
                   <ButtonContainer>
                     {button?.map(({ title }) => (
                       <Button onClick={redirectWhatsApp} key={title}>
@@ -45,9 +57,6 @@ const FullWidthContentBlock = ({ icon, title, button }: ContentBlockProps) => {
                 </StyledContent>
               </Fade>
             </Col>
-            {/* <Col xs={12} lg={12} style={{ height: "100vh" }}>
-              <BackgroundComponent $backgroundImage={`${icon}`} />
-            </Col> */}
           </Row>
         </HeroContent>
       </HeroSection>

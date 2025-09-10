@@ -7,7 +7,7 @@ interface StyledRowProps {
 
 export const ContentSection = styled("section")`
   position: relative;
-  margin-top: 15%;
+  margin-top: 10%;
   @media only screen and (max-width: 1024px) {
     padding-bottom: 0rem;
   }
@@ -52,7 +52,7 @@ export const MinTitle = styled("h6")`
   line-height: 1rem;
   padding: 0.5rem 0;
   text-transform: uppercase;
-  
+
   font-family: "Motiva Sans Light", sans-serif;
 `;
 

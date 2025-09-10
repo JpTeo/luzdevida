@@ -13,6 +13,24 @@ export const Logo = styled.div`
   gap: 0.5rem;
 `;
 
+export const IntroParagraph = styled.p`
+  color: #f5f5f5;
+  font-size: 1.2rem;
+  max-width: 650px;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+  font-family: "RedHatDisplay", sans-serif;
+
+  strong {
+    color: #ffffff;
+    font-weight: bold;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 1rem;
+    text-align: left;
+  }
+`;
 export const LogoText = styled.span`
   font-size: 1.5rem;
 `;

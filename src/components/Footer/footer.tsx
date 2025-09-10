@@ -60,12 +60,15 @@ const Footer = () => {
           </ColImage>
           <Col xs={24} md={12} style={{ textAlign: "right" }}>
             <div style={{ color: "black" }}>
-              <Typography.Title
-                level={5}
-                style={{ color: "black", marginBottom: "1rem" }}
+              <Typography.Paragraph
+                style={{
+                  color: "black",
+                  marginBottom: "1rem",
+                  fontWeight: "800",
+                }}
               >
                 Información de contacto
-              </Typography.Title>
+              </Typography.Paragraph>
               <Typography.Paragraph style={{ color: "black", margin: 0 }}>
                 Senillosa 324, Caballito,
               </Typography.Paragraph>

@@ -36,7 +36,6 @@ const ContentBlockOnlyText = ({
               textAlign: "center",
               fontSize: "1.5rem",
               width: "100%",
-              padding: "2% 5%",
             }}
           >
             {content}
@@ -44,11 +43,11 @@ const ContentBlockOnlyText = ({
           {button && (
             <div
               style={{
-                marginBottom: "2vw",
                 width: "100%",
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
+                background: "red",
               }}
             >
               <Button

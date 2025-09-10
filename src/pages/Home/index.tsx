@@ -14,125 +14,119 @@ import ContentSlider from "../../content/slider.json";
 import InstalacionesContent from "../../content/InstalacionesContent.json";
 import ProfessionalCards from "../../components/cardsProfesional/professional-card";
 import SEOHead from "../../components/SEOHead";
+import { Button } from "../../common/Button";
+import { useHistory } from "react-router-dom";
 
 const Contact = lazy(() => import("../../components/ContactForm"));
 const Container = lazy(() => import("../../common/Container"));
 const ContentBlock = lazy(() => import("../../components/ContentBlock"));
 
 const Home = () => {
+  const history = useHistory();
+
   return (
     <>
+      {/* SEO principal */}
       <SEOHead
-        title="Instituto Luz de Vida |Residencia Geriátrica en Buenos Aires"
-        description="Residencia geriátrica en Buenos Aires con 20+ años de experiencia. Atención médica 24/7, rehabilitación y contención emocional para adultos mayores."
+        title="Instituto Luz de Vida | Residencia Geriátrica en Buenos Aires"
+        description="Residencia geriátrica premium en Buenos Aires. 20+ años de experiencia, atención médica 24/7, rehabilitación y contención emocional para adultos mayores."
         keywords="geriátrico Buenos Aires, residencia adultos mayores, hogar ancianos CABA, centro geriátrico Argentina, cuidado tercera edad, residencia geriátrica premium, atención médica 24/7, rehabilitación adultos mayores, Senillosa 324"
         canonical="https://www.institutoluzdevida.com.ar/"
       />
 
       <WhatsAppButton />
+      <FullWidthContentBlock
+        icon="/img/googleMaps.png"
+        title={IntroContent.title}
+        content={IntroContent.text}
+        button={IntroContent.button}
+        direction="right"
+        imageSize={{
+          height: "100%",
+          width: "100%",
+        }}
+      />
 
-      <main>
-        <FullWidthContentBlock
-          icon="/img/googleMaps.png"
-          title={IntroContent.title}
-          content={IntroContent.text}
-          button={IntroContent.button}
-          direction={"right"}
-          imageSize={{
-            height: "100%",
-            width: "100%",
-          }}
-        />
+      <Container>
+        <br />
+        <br />
 
-        <Container>
-          <br></br>
-          <br></br>
+        {/* Servicios */}
+        <section id="product" aria-labelledby="product-heading">
+          <h2 id="product-heading">{ProductContent.title}</h2>
+          <ContentBlock
+            direction="left"
+            title={null}
+            content={ProductContent.text}
+            icon="/img/logosNuevos/logo1.png"
+            id="product"
+            imageSize={{
+              height: "auto",
+              width: "70%",
+            }}
+          />
+        </section>
 
-          <section id="product" aria-labelledby="product-heading">
-            <ContentBlock
-              direction="left"
-              title={
-                <h2 className="text-3xl font-semibold">
-                  {ProductContent.title}
-                </h2>
-              }
-              content={ProductContent.text}
-              icon="/img/logosNuevos/logo1.png"
-              id="product"
-              imageSize={{
-                height: "auto",
-                width: "70%",
+        <br />
+
+        {/* Nosotros */}
+        <section id="nosotros" aria-labelledby="nosotros-heading">
+          <h2 id="nosotros-heading">{MissionContent.title}</h2>
+          <div style={{ textAlign: "center", marginBottom: "2rem" }}>
+            <Button
+              onClick={() => {
+                history.push("/NuestroEquipo");
               }}
-            />
-          </section>
+            >
+              Ver detalles sobre el equipo
+            </Button>
+          </div>
+          <ProfessionalCards />
+        </section>
+        <section id="objetivo" aria-labelledby="objetivo-heading">
+          <h2 id="objetivo-heading">{ObjetivoContent.title}</h2>
+          <p style={{ textAlign: "center" }}>{ObjetivoContent.text}</p>
+        </section>
+        <section aria-labelledby="gallery-heading">
+          <h2 id="gallery-heading">Instalaciones y Servicios</h2>
+          <SliderComponent
+            ContentSlider={ContentSlider.image}
+            height="40rem"
+            width="60rem"
+          />
+        </section>
 
-          <br></br>
+        {/* Servicios ampliados */}
+        <section id="servicios" aria-labelledby="servicios-heading">
+          <h2 id="servicios-heading">{InstalacionesContent.title}</h2>
+          <ContentBlock
+            direction="right"
+            imageSize={{
+              height: "100%",
+              width: "100%",
+            }}
+            title={null}
+            content={InstalacionesContent.content}
+            sliderContent={InstalacionesContent.image}
+            fullWidthSlider
+            id="servicios"
+          />
+        </section>
 
-          <section id="nosotros" aria-labelledby="nosotros-heading">
-            <ContentBlockOnlyText
-              id="nosotros"
-              direction="right"
-              title={<h2>{MissionContent.title}</h2>}
-              content={MissionContent.text}
-              button={{
-                title: "Ver detalles sobre el equipo",
-                router: "/NuestroEquipo",
-              }}
-            />
-          </section>
-
-          <section aria-labelledby="professionals-heading">
-            <ProfessionalCards />
-          </section>
-
-          <section id="objetivo" aria-labelledby="objetivo-heading">
-            <ContentBlockOnlyText
-              id="objetivo"
-              direction="left"
-              title={<h2>{ObjetivoContent.title}</h2>}
-              content={ObjetivoContent.text}
-            />
-          </section>
-
-          <section aria-labelledby="gallery-heading">
-            <SliderComponent
-              ContentSlider={ContentSlider.image}
-              height={"40rem"}
-              width={"60rem"}
-            />
-          </section>
-
-          <section id="servicios" aria-labelledby="servicios-heading">
-            <ContentBlock
-              direction="right"
-              imageSize={{
-                height: "100%",
-                width: "100%",
-              }}
-              title={InstalacionesContent.title}
-              content={InstalacionesContent.content}
-              sliderContent={InstalacionesContent.image}
-              fullWidthSlider
-              id="servicios"
-            />
-          </section>
-
-          <section aria-labelledby="location-heading">
-            <FooterWithMap
-              address={"Senillosa 324, Cdad. Autónoma de Buenos Aires"}
-            />
-          </section>
-
-          <section id="contact" aria-labelledby="contact-heading">
-            <Contact
-              title={ContactContent.title}
-              content={ContactContent.text}
-              id="contact"
-            />
-          </section>
-        </Container>
-      </main>
-
+        {/* Mapa */}
+        <section aria-labelledby="location-heading">
+          <h2 id="location-heading">Cómo llegar a Instituto Luz de Vida</h2>
+          <FooterWithMap address="Senillosa 324, Cdad. Autónoma de Buenos Aires" />
+        </section>
+        <section id="contact" aria-labelledby="contact-heading">
+          <h2 id="contact-heading">{ContactContent.title}</h2>
+          <Contact
+            title={ContactContent.title}
+            content={ContactContent.text}
+            id="contact"
+          />
+        </section>
+      </Container>
       <Footer />
     </>
   );

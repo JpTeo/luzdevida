@@ -48,6 +48,16 @@ export const Styles = createGlobalStyle`
             box-shadow:rgb(252, 0, 13) 0px 0px 0px 1px;
         }
     }
+    section{
+        margin:10% 0;
+        display:  flex;
+        justify-content: center;
+        flex-direction: column; 
+        alin-items: center;
+    }
+    h2{
+        margin-bottom:2%;
+    }
 
     h1,
     h2,
@@ -58,8 +68,7 @@ export const Styles = createGlobalStyle`
         font-family: 'Comme Bold', serif;
         color: rgb(255, 255, 255);
         font-size: 56px;
-        line-height: 1.18;
-
+        text-align:center;
         @media only screen and (max-width: 890px) {
           font-size: 47px;
         }
