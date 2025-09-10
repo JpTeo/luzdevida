@@ -34,7 +34,7 @@ const Home = () => {
       <main>
         <FullWidthContentBlock
           icon="/img/googleMaps.png"
-          title={IntroContent.title}
+          title={<h1 className="text-4xl font-bold">{IntroContent.title}</h1>}
           content={IntroContent.text}
           button={IntroContent.button}
           direction={"right"}
@@ -51,7 +51,11 @@ const Home = () => {
           <section id="product" aria-labelledby="product-heading">
             <ContentBlock
               direction="left"
-              title={ProductContent.title}
+              title={
+                <h2 className="text-3xl font-semibold">
+                  {ProductContent.title}
+                </h2>
+              }
               content={ProductContent.text}
               icon="/img/logosNuevos/logo1.png"
               id="product"
@@ -68,7 +72,7 @@ const Home = () => {
             <ContentBlockOnlyText
               id="nosotros"
               direction="right"
-              title={MissionContent.title}
+              title={<h2>{MissionContent.title}</h2>}
               content={MissionContent.text}
               button={{
                 title: "Ver detalles sobre el equipo",
@@ -85,7 +89,7 @@ const Home = () => {
             <ContentBlockOnlyText
               id="objetivo"
               direction="left"
-              title={ObjetivoContent.title}
+              title={<h2>{ObjetivoContent.title}</h2>}
               content={ObjetivoContent.text}
             />
           </section>

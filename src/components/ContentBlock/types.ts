@@ -1,6 +1,8 @@
+import { ReactNode } from "react";
+
 export interface ContentBlockProps {
   icon?: string;
-  title: string;
+  title: ReactNode;
   content: string;
   imageSize: { height: string; width: string };
   fullWidthSlider?: boolean;

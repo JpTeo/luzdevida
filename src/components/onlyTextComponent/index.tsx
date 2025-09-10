@@ -1,10 +1,11 @@
+import { ReactNode } from "react";
 import { Button } from "../../common/Button";
 import { ContentSection, StyledRow } from "./style";
 import { Fade } from "react-awesome-reveal";
 import { useHistory } from "react-router-dom";
 
 export interface ContentBlockProps {
-  title: string;
+  title: ReactNode;
   content: string;
   direction: "left" | "right";
   id: string;
