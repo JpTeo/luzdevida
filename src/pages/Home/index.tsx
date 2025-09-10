@@ -23,8 +23,8 @@ const Home = () => {
   return (
     <>
       <SEOHead
-        title="Instituto Luz de Vida | Residencia Geriátrica Premium en Buenos Aires"
-        description="Instituto Luz de Vida: residencia geriátrica premium en Buenos Aires con 20+ años de experiencia. Atención médica 24/7, rehabilitación y contención emocional para adultos mayores. ¡Visitanos!"
+        title="Instituto Luz de Vida |Residencia Geriátrica en Buenos Aires"
+        description="Residencia geriátrica en Buenos Aires con 20+ años de experiencia. Atención médica 24/7, rehabilitación y contención emocional para adultos mayores."
         keywords="geriátrico Buenos Aires, residencia adultos mayores, hogar ancianos CABA, centro geriátrico Argentina, cuidado tercera edad, residencia geriátrica premium, atención médica 24/7, rehabilitación adultos mayores, Senillosa 324"
         canonical="https://www.institutoluzdevida.com.ar/"
       />
@@ -34,7 +34,7 @@ const Home = () => {
       <main>
         <FullWidthContentBlock
           icon="/img/googleMaps.png"
-          title={<h1 className="text-4xl font-bold">{IntroContent.title}</h1>}
+          title={IntroContent.title}
           content={IntroContent.text}
           button={IntroContent.button}
           direction={"right"}

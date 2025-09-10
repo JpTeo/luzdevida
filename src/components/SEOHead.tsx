@@ -12,7 +12,7 @@ interface SEOHeadProps {
 }
 
 const SEOHead = ({
-  title = "Instituto Luz de Vida | Residencia Geriátrica Premium en Buenos Aires",
+  title = "Instituto Luz de Vida |Residencia Geriátrica en Buenos Aires",
   description = "Instituto Luz de Vida: residencia geriátrica premium en Buenos Aires con 20+ años de experiencia. Atención médica 24/7, rehabilitación y contención emocional para adultos mayores.",
   keywords = "geriátrico Buenos Aires, residencia adultos mayores, hogar ancianos CABA, centro geriátrico Argentina, cuidado tercera edad",
   canonical = "https://www.institutoluzdevida.com.ar/",

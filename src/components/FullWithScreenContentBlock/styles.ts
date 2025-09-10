@@ -67,7 +67,7 @@ export const HeroContent = styled.div`
   }
 `;
 
-export const TextHighlight = styled.h2`
+export const TextHighlight = styled.h1`
   color: ;
   font-size: 4rem;
   font-weight: bold;
@@ -78,7 +78,7 @@ export const TextHighlight = styled.h2`
   }
 `;
 
-export const MainHeading = styled.h1`
+export const MainHeading = styled.h2`
   color: white;
   font-size: 2rem;
   line-height: 1.1;

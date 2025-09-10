@@ -90,7 +90,7 @@ const ContentBlock = ({
 
           <ColText lg={11} md={12} sm={24} xs={24}>
             <ContentWrapper>
-              <h1>{title}</h1>
+              <h2>{title}</h2>
               <Content>{content}</Content>
 
               <ServiceWrapper>
