@@ -16,7 +16,11 @@ export default function CardProfessional(professional: Professional) {
     >
       {/* Parte superior - imagen */}
       <div style={{ flex: "0 0 auto" }}>
-        <ImageStyle src={professional.icon} preview={false} />
+        <ImageStyle
+          src={professional.icon}
+          preview={false}
+          alt="Profesionales logo"
+        />
       </div>
 
       {/* Parte media - texto */}

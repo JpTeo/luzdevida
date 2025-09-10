@@ -13,6 +13,7 @@ export interface ButtonProps {
 export interface SvgIconProps {
   src: string;
   width: string;
+  alt: string;
   height: string;
 }
 

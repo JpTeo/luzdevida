@@ -70,6 +70,7 @@ const ContentBlock = ({
               }}
             >
               <SvgIcon
+                alt="icon"
                 src={icon}
                 width={imageSize.width}
                 height={imageSize.height}
@@ -98,7 +99,12 @@ const ContentBlock = ({
                   {typeof section === "object" &&
                     section?.map((item, id) => (
                       <Col key={id} span={11}>
-                        <SvgIcon src={item.icon} width="60px" height="60px" />
+                        <SvgIcon
+                          src={item.icon}
+                          width="60px"
+                          height="60px"
+                          alt="Icon"
+                        />
                         <MinTitle>{item.title}</MinTitle>
                         <MinPara>{item.content}</MinPara>
                       </Col>

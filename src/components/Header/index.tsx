@@ -61,6 +61,7 @@ const Header = () => {
           {/* Logo con enlace semántico */}
           <LogoContainer to="/" aria-label="Inicio">
             <SvgIcon
+              alt="Logo Instituto Luz de Vida"
               src="/img/logosNuevos/logo1.png"
               aria-hidden="true"
               width="100"

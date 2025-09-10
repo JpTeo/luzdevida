@@ -1,9 +1,9 @@
 import { SvgIconProps } from "../types";
 
-export const SvgIcon = ({ src, width, height }: SvgIconProps) => (
+export const SvgIcon = ({ src, width, height, alt }: SvgIconProps) => (
   <img
     src={`${src}`}
-    alt={src}
+    alt={alt}
     width={width}
     height={height}
     style={{ borderRadius: "10px" }}

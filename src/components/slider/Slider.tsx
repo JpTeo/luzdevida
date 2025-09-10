@@ -25,7 +25,7 @@ const SliderComponent = ({
       navigation
       autoplay={{ delay: 4000 }}
       className="mySwiper"
-      style={{ height: height,  }}
+      style={{ height: height }}
     >
       {ContentSlider.map((item, index) => (
         <SwiperSlide
@@ -53,7 +53,7 @@ const SliderComponent = ({
               // borderRadius: "20px",
             }}
           >
-            <SvgIcon src={item} width="unset" height="100%" />
+            <SvgIcon src={item} width="unset" height="100%" alt="Logo" />
           </div>
         </SwiperSlide>
       ))}
