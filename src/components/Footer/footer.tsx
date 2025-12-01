@@ -78,6 +78,9 @@ const Footer = () => {
               <Typography.Paragraph style={{ color: "black", margin: 0 }}>
                 Teléfono: +54 9 11 3825-9999
               </Typography.Paragraph>
+              <Typography.Paragraph style={{ color: "black", margin: 0 }}>
+                4902-0378 / 2069-7029
+              </Typography.Paragraph>
               <FooterContainer
                 style={{
                   display: "flex",
